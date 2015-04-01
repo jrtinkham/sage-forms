@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Client Reversal Authorization | Sage Payroll Services</title>
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$("#datepicker1").datepicker();
+		$("#datepicker2").datepicker();
+	});
+</script>
+</head>
+
+
+<body>
+
+<section id="header">
+
+	<div class="container-fluid">
+	
+		<div class="page-top row">
+			<div class="col-lg-12">	
+				<p> </p>
+			</div>
+		</div>
+		
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html"><img src="lgo-sage.png" class="nav-brand" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" /></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="sage-client-reversal.html">Client Reversal <span class="sr-only">(current)</span></a></li>
+				<li><a href="sage-direct-deposit.html">Direct Deposit</a></li>
+				<li><a href="sage-limit-increase.html">Limit Increase</a></li>
+				<li><a href="sage-reverse-withdrawal.html">Reverse Withdrawal</a></li>
+				<li><a href="sage-term-request.html">Term Request</a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		
+		<div class="logo row">
+			<div class="col-lg-4 col-lg-offset-4">
+				<img src="logo.png" class="img-responsive" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" />
+			</div>
+		</div>
+	
+
+		<div class="page-header row">
+			<div class="col-lg-12">
+				<h1>Client Reversal Authorization</h1>
+			</div>
+		</div>
+		
+	</div>
+	
+</section>
+
+<section id="main" class="col-lg-10 col-lg-offset-1">
+	
+	<form class="form-horizontal" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=>
+	
+	<input class="form-control" type=hidden name=fform value=1>	
+	
+	<fieldset name="Client Information">
+		
+		<div class="container-fluid">
+				
+			<div class="fieldset-header">
+				
+				<h2> </h2>
+				
+			</div>
+			
+			<div class="fieldset-body">
+			
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Company Name (as it appears on your account)</label>
+					<div class="col-lg-4 controls">	
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Company ID Number</label>
+					<div class="col-lg-4 controls">
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Contact Name</label>
+					<div class="col-lg-4 controls">	
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Phone Number</label>
+					<div class="col-lg-2 controls">	
+						<input class="form-control" type="tel" size="14" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Check Date</label>
+					<div class="col-lg-2 controls">	
+						<input class="form-control" type="date" id="datepicker1" size="10" name="" />
+					</div>
+				</div>
+				
+				<blockquote class="col-lg-6 col-lg-offset-4">
+					<p>We request that you reverse or delete the entries set forth below. Each 
+					reversal or deletion is being requested to correct an erroneous credit to an 
+					employee's bank account and the amount being reversed/deleted is due and owing to 
+					us. If this request is received by you in time to permit you stop the payment to 
+					the affected employee, we request that you do so. If this request is received 
+					after such time, we request that you revers such payment by debiting the employee's 
+					account or accounts. We understand that requests for reversals must be received 
+					by Sage 50 Direct Deposit no later than the close of business on the fourth 
+					banking day following the date of the direct deposit into the employee's account. We 
+					also agree to inform each affected employee of the requested reversal no later than 
+					the &quot;Settlement Date&quot; of the reversal entry and of the reason for reversal. The 
+					&quot;Settlement Date&quot; of the reversing entry is generally the pay date of the payroll 
+					or the next banking day after our receipt of your request, whichever is later.</p>
+					
+					<p>We acknowledge that you may be unable to successfully reverse an erroneous credit. We 
+					hereby agree to indemnify and hold you harmless from any liability, claim or damages 
+					that may result from your attempts to delete or revers the entries as requested by us.</p>
+					
+					<p>We acknowledge that we will be charged a $35.00 processing fee for this request 
+					and that this fee will be debited directly from our bank account.</p>
+					
+				</blockquote>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Signature</label>
+					<div class="col-lg-3 controls">	
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Today's Date</label>
+					<div class="col-lg-2 controls">	
+						<input class="form-control" type="date" id="datepicker2" size="10" name="" />
+					</div>
+				</div>
+
+				<blockquote class="col-lg-6 col-lg-offset-4">
+					
+					<p>Please make copies, complete, and sign additional forms if more reversals are required. 
+					Complete and sign separate forms if reversals are required on additional companies. Please 
+					use one box per individual employee deposit reversal. If employee has multiple direct 
+					deposits to reverse, use multiple boxes. If a reversal is successful, it may take up to 
+					five business days to reimburse the funds.</p>
+		
+					<p>Sage, the Sage logos, and the Sage product and service names mentioned herein 
+					are registered trademarks or trademarks of Sage Software, Inc., or its affiliated entities.</p>
+		
+				</blockquote>
+
+			</div>
+		</div>		
+	</fieldset>
+	
+	<div class="container-fluid">
+		<div class="col-lg-2 col-lg-offset-5">
+			<input type=hidden name=rdr value='http://www.paychoice.com/thankyou.html'>
+			<input class="btn btn-info btn-lg btn-block" type=submit value=Submit name="Submit">
+		</div>
+	</div>
+	
+</form>
+
+</section>
+
+<section id="footer">
+	
+	<div class="row">
+	
+		<div class="col-lg-4 col-lg-offset-4">
+			<p>© 2015 <a href="index.html">Sage Payroll Solutions, Inc</a>. All Rights Reserved. <a href="legal.html">Legal</a></p>
+		</div>
+		
+	</div>
+	
+</section>
+
+
+
+<script lang="javascript">
+		function CheckForOther (item, origlen)
+			{
+			var sitem = item.options[item.selectedIndex];
+
+			if (item.selectedIndex == (item.length - 1))
+				{
+				var val = prompt ("ADD A NEW CHOICE:", "");
+
+				if (val == null)
+					item.selectedIndex = 0;
+				else	
+					{
+					var slen = item.length;
+
+					if (slen == origlen+1){
+						item.options[slen] = new Option (sitem.text, sitem.value);
+      	          		}
+			
+					item.options[item.length-2].text = val;
+					item.options[item.length-2].value = val;
+					item.selectedIndex = item.length-2;
+					}
+				}
+			}
+</script>
+
+<script lang=javascript>
+		function validateForm(theForm)
+		{
+			}
+</script>
+</body>
+
+</html>

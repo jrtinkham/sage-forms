@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Reverse Wire/1031 Drawdown Funds Transfer Authorization | Sage Payroll Services</title>
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$("#datepicker1").datepicker();
+		$("#datepicker2").datepicker();
+	});
+</script>
+</head>
+
+
+<body>
+
+<section id="header">
+
+	<div class="container-fluid">
+	
+		<div class="page-top row">
+			<div class="col-lg-12">	
+				<p> </p>
+			</div>
+		</div>
+		
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html"><img src="lgo-sage.png" class="nav-brand" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" /></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sage-client-reversal.html">Client Reversal</a></li>
+				<li><a href="sage-direct-deposit.html">Direct Deposit</a></li>
+				<li><a href="sage-limit-increase.html">Limit Increase</a></li>
+				<li class="active"><a href="sage-reverse-withdrawal.html">Reverse Withdrawal <span class="sr-only">(current)</span></a></li>
+				<li><a href="sage-term-request.html">Term Request</a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		
+		<div class="logo row">
+			<div class="col-lg-4 col-lg-offset-4">
+				<img src="logo.png" class="img-responsive" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" />
+			</div>
+		</div>
+	
+
+		<div class="page-header row">
+			<div class="col-lg-12">
+				<h1>Reverse Wire/1031 Drawdown Funds Transfer Authorization</h1>
+			</div>
+		</div>
+		
+	</div>
+	
+</section>
+	
+	
+<section id="main" class="col-lg-10 col-lg-offset-1">
+	
+	<form class="form-horizontal" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=>
+	
+	<input class="form-control" type=hidden name=fform value=1>
+
+	<fieldset name="Client Information">
+		
+		<div class="container-fluid">
+			
+			<div class="fieldset-header">
+				
+				<span> </span>
+				
+			</div>
+			
+			<div class="fieldset-body">
+
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Customer Name*</label>
+					<div class="col-lg-4 controls">	
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Customer Account Number*</label>
+					<div class="col-lg-3 controls">
+						<input class="form-control" type="text" size="10" name="" />
+					</div>
+				</div>
+				
+				<blockquote class="col-lg-6 col-lg-offset-3">
+				
+					<p>The said client authorizes Sage Payroll Services to process a Reverse Wire/1031 
+					Drawdown through the Fed wire system to debit client’s account for payroll funding.</p>
+					
+				</blockquote>
+
+				<div class="form-group">
+					<label class="col-lg-3 col-lg-offset-1 control-label">Bank Account Name</label>
+					<div class="col-lg-4 controls">
+						<input class="form-control" type="text" size="60" name="" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-lg-3 col-lg-offset-1 control-label">Account Number</label>
+					<div class="col-lg-3 controls">	
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Routing Number</label>
+					<div class="col-lg-3 controls">	
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+			
+				<blockquote class="col-lg-6 col-lg-offset-3">
+					
+					<p>Once the funds are received in Sage’s account we will process payroll to make your 
+					payroll date. If the Reverse Wire/1031 Drawdown funds requested is not received 
+					within a timely manner of processing payroll we can not guarantee payroll date.</p>
+				
+					<p>We may act upon this authorization until we receive written notice of termination 
+					from said client and have a reasonable time to act upon the notice.</p>
+				
+					<p>The undersigned represents and warrants that he or she is an authorized signor on 
+					above bank account to sign this Reverse Wire/ 1031 Drawdown Funds Transfer 
+					Authorization Form on behalf of the owner of the clients account and upon execution, 
+					this agreement is binding on the owner.</p>
+					
+				</blockquote>
+
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Status</label>
+					<div class="col-lg-3">	
+						<select class="form-control" name="" >
+							<option selected value>-- Please Select--</option>
+							<option>O - Initial Inquiry</option>
+							<option>1 - Investigating</option>
+							<option>2 - Waiting for Response</option>
+							<option>3 - Escalated</option>
+							<option>3 - Escalated to Manager</option>
+							<option>3 - Escalated to Sage 50 Support</option>
+							<option>3 - Escalated to Development</option>
+							<option>4 - Resolved</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Category</label>
+					<div class="col-lg-3">	
+						<select class="form-control" name="" >
+							<option selected value>-- Please Select--</option>
+							<option>Technical Support</option>
+							<option>ACH NSF</option>
+							<option>ACH FEE NSF</option>
+							<option>ACH Change</option>
+							<option>Variance Correction</option>
+							<option>Billing Issue</option>
+							<option>Wire</option>
+							<option>ACH</option>
+							<option>Pricing</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Short Description</label>
+					<div class="col-lg-4 controls">
+						<input class="form-control" type="text" size="10" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Case Notes</label>
+					<div class="col-lg-5 controls">
+						<textarea class="form-control" rows="4" cols="75" name=""></textarea>
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Amount</label>
+					<div class="col-lg-2 controls">
+						<input class="form-control" type="text" size="10" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Amount Type</label>
+					<div class="col-lg-3 controls">
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Any Issues or Problems?</label>
+					<div class="col-lg-2">	
+						<select class="form-control" name="" >
+							<option selected value>-- Please Select--</option>
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Problem Notes</label>
+					<div class="col-lg-4 controls">
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Effective Date</label>
+					<div class="col-lg-2 controls">
+						<input class="form-control" type="date" id="datepicker1" size="10" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Individual Company Name</label>
+					<div class="col-lg-4 controls">
+						<input class="form-control" type="text" size="40" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Informational</label>
+					<div class="col-lg-2 controls">
+						<input class="form-control" type="checkbox" size="40" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Payroll Date</label>
+					<div class="col-lg-2 controls">
+						<input class="form-control" type="date" id="datepicker2" size="10" name="" />
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Product</label>
+					<div class="col-lg-3">	
+						<select class="form-control" name="" >
+							<option selected value>-- Please Select--</option>
+							<option>Online Payroll Options</option>
+							<option>Workers Comp</option>
+							<option>Time and Attendance</option>
+							<option>Employee Services</option>
+							<option>My Recruiting Center</option>
+							<option>HR Answerlink</option>
+							<option>401k Plan/Contributions</option>
+							<option>Tax Service</option>
+							<option>Direct deposit</option>
+							<option>OMNI checks</option>
+							<option>PayCards</option>
+							<option>FSA / Med 125 Plans</option>
+							<option>Other (please specify in notes)</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group">	
+					<label class="col-lg-3 col-lg-offset-1 control-label">Return Reason</label>
+					<div class="col-lg-4 controls">
+						<input class="form-control input-small" type="text" size="40" name="" />
+					</div>
+				</div>
+	
+			</div>
+		</div>		
+	</fieldset>
+	
+	<div class="container-fluid">
+		<div class="col-lg-2 col-lg-offset-5">
+			<input type=hidden name=rdr value='http://www.paychoice.com/thankyou.html'>
+			<input class="btn btn-info btn-lg btn-block" type=submit value=Submit name="Submit">
+		</div>
+	</div>
+	
+</form>
+
+</section>
+
+</br>
+
+<section id="footer">
+	
+	<div class="row">
+	
+		<div class="col-lg-4 col-lg-offset-4">
+			<p>© 2015 <a href="index.html">Sage Payroll Solutions, Inc</a>. All Rights Reserved. <a href="legal.html">Legal</a></p>
+		</div>
+		
+	</div>
+	
+</section>
+
+
+<script lang="javascript">
+		function CheckForOther (item, origlen)
+			{
+			var sitem = item.options[item.selectedIndex];
+
+			if (item.selectedIndex == (item.length - 1))
+				{
+				var val = prompt ("ADD A NEW CHOICE:", "");
+
+				if (val == null)
+					item.selectedIndex = 0;
+				else	
+					{
+					var slen = item.length;
+
+					if (slen == origlen+1){
+						item.options[slen] = new Option (sitem.text, sitem.value);
+      	          		}
+			
+					item.options[item.length-2].text = val;
+					item.options[item.length-2].value = val;
+					item.selectedIndex = item.length-2;
+					}
+				}
+			}
+</script>
+
+<script lang=javascript>
+		function validateForm(theForm)
+		{
+			}
+</script>
+</body>
+
+</html>
