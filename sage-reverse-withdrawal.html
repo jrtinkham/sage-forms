@@ -87,7 +87,7 @@
 	
 <section id="main" class="col-lg-10 col-lg-offset-1">
 	
-	<form class="form-horizontal" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=>
+	<form class="form-horizontal" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=https://paychoice.quickbase.com/db/bjiga5tiu?act=API_AddRecord&apptoken=cwfcy7gdzqrsyncqbi2bn4u4kr>
 	
 	<input class="form-control" type=hidden name=fform value=1>
 
@@ -106,14 +106,14 @@
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Customer Name*</label>
 					<div class="col-lg-4 controls">	
-						<input class="form-control" type="text" size="40" name="" />
+						<input class="form-control" type="text" size="40" name="_fid_6" />
 					</div>
 				</div>
 
 				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Customer Account Number*</label>
+					<label class="col-lg-3 col-lg-offset-1 control-label">Sage Customer ID</label>
 					<div class="col-lg-3 controls">
-						<input class="form-control" type="text" size="10" name="" />
+						<input class="form-control" type="text" size="10" name="_fid_22" />
 					</div>
 				</div>
 				
@@ -127,24 +127,24 @@
 				<div class="form-group">
 					<label class="col-lg-3 col-lg-offset-1 control-label">Bank Account Name</label>
 					<div class="col-lg-4 controls">
-						<input class="form-control" type="text" size="60" name="" />
-					</div>
-				</div>
-
-				<div class="form-group">
-					<label class="col-lg-3 col-lg-offset-1 control-label">Account Number</label>
-					<div class="col-lg-3 controls">	
-						<input class="form-control" type="text" size="40" name="" />
+						<input class="form-control" type="text" size="60" name="_fid_66" />
 					</div>
 				</div>
 
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Routing Number</label>
 					<div class="col-lg-3 controls">	
-						<input class="form-control" type="text" size="40" name="" />
+						<input class="form-control" type="text" size="40" name="_fid_70" />
 					</div>
 				</div>
-			
+				
+				<div class="form-group">
+					<label class="col-lg-3 col-lg-offset-1 control-label">Account Number</label>
+					<div class="col-lg-3 controls">	
+						<input class="form-control" type="text" size="40" name="_fid_71" />
+					</div>
+				</div>
+
 				<blockquote class="col-lg-6 col-lg-offset-3">
 					
 					<p>Once the funds are received in Sage’s account we will process payroll to make your 
@@ -159,7 +159,8 @@
 					Authorization Form on behalf of the owner of the clients account and upon execution, 
 					this agreement is binding on the owner.</p>
 					
-				</blockquote>
+				</blockquote>	
+
 				
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Short Description</label>
@@ -177,7 +178,8 @@
 				
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Amount</label>
-					<div class="col-lg-2 controls">
+					<div class="col-lg-2 controls input-group">
+						<span class="input-group-addon">$</span>
 						<input class="form-control" type="text" size="10" name="" />
 					</div>
 				</div>
@@ -191,15 +193,19 @@
 				
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Effective Date</label>
-					<div class="col-lg-2 controls">
+					<div class="col-lg-2 controls input-group">
 						<input class="form-control" type="date" id="datepicker1" size="10" name="" />
+						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
 					</div>
 				</div>
 				
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Original Payroll Date</label>
-					<div class="col-lg-2 controls">
-						<input class="form-control" type="date" id="datepicker2" size="10" name="" />
+
+					<div class="col-lg-2 controls input-group">
+						<input class="form-control" type="date" id="datepicker2" size="10" name="_fid_65" />
+						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
+
 					</div>
 				</div>
 	
@@ -218,18 +224,15 @@
 
 </section>
 
-</br>
-
 <section id="footer">
 	
 	<div class="row">
-	
-		<div class="col-lg-4">
-			<p class="repo-owner"><a href="https://github.com/jrtinkham/sage-forms">Sage-Forms Project Page</a> is maintained by <a href="https://github.com/jrtinkham">jrtinkham</a>.</p>
-        </div>
-	
-		<div class="col-lg-4 col-lg-offset-2">
-			<p>© 2015 <a href="index.html">Sage Payroll Solutions, Inc</a>. All Rights Reserved. <a href="legal.html">Legal</a></p>
+
+		<div class="col-lg-4 col-lg-offset-4">
+			
+			<p>© 2015 <a href="index.html">Sage Payroll Services, Inc</a>. All Rights Reserved. <a href="legal.html">Legal</a></p>
+		
+
 		</div>
 		
 	</div>
