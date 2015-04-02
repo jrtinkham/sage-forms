@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>ACH Limit Increase Request Form | Sage Payroll Services</title>
+<title>Limit Increase Request | Sage Payroll Services</title>
 
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
@@ -77,7 +77,7 @@
 
 		<div class="page-header row">
 			<div class="col-lg-12">
-				<h1>ACH Limit Increase Request Form</h1>
+				<h1>Limit Increase Request</h1>
 			</div>
 		</div>
 		
@@ -87,7 +87,7 @@
 
 <section id="main" class="col-lg-10 col-lg-offset-1">
 	
-	<form class="form-horizontal" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=>
+	<form class="form-horizontal" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=https://paychoice.quickbase.com/db/bjiga5tiu?act=API_AddRecord&apptoken=cwfcy7gdzqrsyncqbi2bn4u4kr>
 	
 	<input class="form-control" type=hidden name=fform value=1>	
 	
@@ -105,22 +105,23 @@
 			
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Date Requested</label>
-					<div class="col-lg-2 controls">	
+					<div class="col-lg-2 controls input-group">	
 						<input class="form-control" type="date" id="datepicker1" size="10" name="" />
+						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
 					</div>
 				</div>
 			
 				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Client Account #</label>
+					<label class="col-lg-3 col-lg-offset-1 control-label">Sage Customer ID</label>
 					<div class="col-lg-4 controls">	
-						<input class="form-control" type="text" size="40" name="" />
+						<input class="form-control" type="text" size="40" name="_fid_22" />
 					</div>
 				</div>
 
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Legal Company Name</label>
 					<div class="col-lg-4 controls">
-						<input class="form-control" type="text" size="40" name="" />
+						<input class="form-control" type="text" size="40" name="_fid_6" />
 					</div>
 				</div>
 				
@@ -137,8 +138,9 @@
 				
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Effective Termination Date</label>
-					<div class="col-lg-2 controls">	
+					<div class="col-lg-2 controls input-group">	
 						<input class="form-control" type="date" id="datepicker1" size="10" name="" />
+						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
 					</div>
 				</div>
 				
@@ -237,20 +239,21 @@
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Contact Name</label>
 					<div class="col-lg-4 controls">	
-						<input class="form-control" type="text" size="40" name="" />
+						<input class="form-control" type="text" size="40" name="_fid_80" />
 					</div>
 				</div>
 
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Contact Phone Number</label>
 					<div class="col-lg-2 controls">	
-						<input class="form-control" type="tel" size="14" name="" />
+						<input class="form-control" type="tel" size="14" name="_fid_27" />
 					</div>
 				</div>
 				
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Requested Direct Deposit Limit</label>
-					<div class="col-lg-4 controls">	
+					<div class="col-lg-4 controls input-group">	
+						<span class="input-group-addon">$</span>
 						<input class="form-control" type="text" size="40" name="" />
 					</div>
 				</div>
@@ -310,8 +313,9 @@
 
 				<div class="form-group">	
 					<label class="col-lg-3 col-lg-offset-1 control-label">Today's Date</label>
-					<div class="col-lg-2 controls">	
+					<div class="col-lg-2 controls input-group">	
 						<input class="form-control" type="date" id="datepicker3" size="10" name="" />
+						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
 					</div>
 				</div>
 
@@ -333,9 +337,11 @@
 <section id="footer">
 	
 	<div class="row">
-	
+
 		<div class="col-lg-4 col-lg-offset-4">
-			<p>© 2015 <a href="index.html">Sage Payroll Solutions, Inc</a>. All Rights Reserved. <a href="legal.html">Legal</a></p>
+			
+			<p>© 2015 <a href="index.html">Sage Payroll Services, Inc</a>. All Rights Reserved. <a href="legal.html">Legal</a></p>
+		
 		</div>
 		
 	</div>
