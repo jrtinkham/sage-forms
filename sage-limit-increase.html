@@ -7,27 +7,37 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Limit Increase Request | Sage Payroll Services</title>
+<title>Direct Deposit Service Agreement | Sage Payroll Services</title>
 
+<!-- Bootstrap CSS v3.0.0 or higher -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<link href="style.css" rel="stylesheet" type="text/css" />
 
+<!-- FormValidation CSS file -->
+<link rel="stylesheet" href="/vendor/formvalidation/dist/css/formValidation.min.css">
+
+<!-- jQuery UI Theme CSS file -->
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+<!-- Sage Payroll CSS file -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<!-- jQuery v1.9.1 or higher -->
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script>
-	$(function() {
-		$("#datepicker1").datepicker();
-		$("#datepicker2").datepicker();
-		$("#datepicker3").datepicker();
-	});
-</script>
-</head>
 
+<!-- Bootstrap JS -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<!-- FormValidation plugin and the class supports validating Bootstrap form -->
+<script src="/vendor/formvalidation/dist/js/formValidation.min.js"></script>
+<script src="/vendor/formvalidation/dist/js/framework/bootstrap.min.js"></script>
+
+<!-- Back To Top plugin -->
+<script type="text/javascript" src="js/back-to-top.js"></script>
+
+</head>
 
 <body>
 
@@ -36,7 +46,7 @@
 	<div class="container-fluid">
 	
 		<div class="page-top row">
-			<div class="col-lg-12">	
+			<div>	
 				<p> </p>
 			</div>
 		</div>
@@ -51,15 +61,15 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="index.html"><img src="lgo-sage.png" class="nav-brand" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" /></a>
+			  <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="nav-brand" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" /></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
 				<li><a href="index.html">Home</a></li>
-				<li><a href="sage-client-reversal.html">Client Reversal</a></li>
 				<li><a href="sage-direct-deposit.html">Direct Deposit</a></li>
+				<li><a href="sage-client-reversal.html">Client Reversal</a></li>
 				<li class="active"><a href="sage-limit-increase.html">Limit Increase <span class="sr-only">(current)</span></a></li>
 				<li><a href="sage-reverse-withdrawal.html">Reverse Withdrawal</a></li>
 				<li><a href="sage-term-request.html">Term Request</a></li>
@@ -67,266 +77,252 @@
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-		
-		<div class="logo row">
-			<div class="col-lg-4 col-lg-offset-4">
-				<img src="logo.png" class="img-responsive" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" />
-			</div>
-		</div>
-	
 
-		<div class="page-header row">
-			<div class="col-lg-12">
-				<h1>Limit Increase Request</h1>
-			</div>
-		</div>
-		
 	</div>
 	
-</section>
+    
+    <div class="btn-blue" id="back-top">
+        <a href="#">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span>
+            <div>Top of Page</div>
+        </a>
+    </div>
+	
+</section>	
+
+
 
 <section id="main" class="col-lg-10 col-lg-offset-1">
+	
+	<h1>Limit Increase Request</h1>
+	
+	<p>Please fill out the form below to apply for the Sage 50 Direct Deposit limit increase request. All fields noted with an asterisk (*) are required.</p>
 	
 	<form class="form-horizontal" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=https://paychoice.quickbase.com/db/bjiga5tiu?act=API_AddRecord&apptoken=cwfcy7gdzqrsyncqbi2bn4u4kr>
 	
 	<input class="form-control" type=hidden name=fform value=1>	
 	
-	<fieldset name="Client Information">
+	<fieldset name="Limit Increase Request">
 		
 		<div class="container-fluid">
 				
-			<div class="fieldset-header">
-				
-				<h2> </h2>
-				
-			</div>
-			
-			<div class="fieldset-body">
-			
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Date Requested</label>
-					<div class="col-lg-2 controls input-group">	
-						<input class="form-control" type="date" id="datepicker1" size="10" name="" />
-						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
-					</div>
-				</div>
-			
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Sage Customer ID</label>
-					<div class="col-lg-4 controls">	
-						<input class="form-control" type="text" size="40" name="_fid_22" />
-					</div>
-				</div>
+            <h2> </h2>
 
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Legal Company Name</label>
-					<div class="col-lg-4 controls">
-						<input class="form-control" type="text" size="40" name="_fid_6" />
-					</div>
-				</div>
-				
-				<blockquote class="col-lg-6 col-lg-offset-4">
-					<p><em>Note: </em>This form is for permanent ACH limit change requests 
-					only. It may take up to two business days to review and make a decision 
-					on this request. All requests are subject to Credit Department Approval.</p>
-					
-					<p>For a one time only, extraordinary payroll exceeding current ACH limits, 
-					submit the payroll as usual through the Sage 50 product. If your Sage 
-					50 support team has questions regarding the one time, extraordinary payroll, 
-					the support team will contact you within two hours of your payroll submission.</p>
-				</blockquote>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Effective Termination Date</label>
-					<div class="col-lg-2 controls input-group">	
-						<input class="form-control" type="date" id="datepicker1" size="10" name="" />
-						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<label class="col-lg-3 col-lg-offset-1 control-label">Address</label>
-					<div class="col-lg-4 controls">
-						<input class="form-control" type="text" size="60" name="" />
-					</div>
-				</div>
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Date Requested</label>
+                <div class="col-lg-2 controls input-group">	
+                    <input class="form-control" type="date" id="datepicker1" size="10" name="" />
+                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                </div>
+            </div>
 
-				<div class="form-group">
-					<label class="col-lg-3 col-lg-offset-1 control-label">City</label>
-					<div class="col-lg-3 controls">	
-						<input class="form-control" type="text" size="60" name="" />
-					</div>
-				</div>
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Sage Customer ID</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="40" name="_fid_22" />
+                </div>
+            </div>
 
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">State/Region</label>
-					<div class="col-lg-2">	
-						<select class="form-control" name="" >
-							<option selected value>-- Please Select--</option>
-							<option>Alabama</option>
-							<option>Alaska</option>
-							<option>Arizona</option>
-							<option>Arkansas</option>
-							<option>California</option>
-							<option>Colorado</option>
-							<option>Connecticut</option>
-							<option>Delaware</option>
-							<option>District of Columbia</option>
-							<option>Florida</option>
-							<option>Georgia</option>
-							<option>Hawaii</option>
-							<option>Idaho</option>
-							<option>Illinois</option>
-							<option>Indiana</option>
-							<option>Iowa</option>
-							<option>Kansas</option>
-							<option>Kentucky</option>
-							<option>Louisiana</option>
-							<option>Maine</option>
-							<option>Maryland</option>
-							<option>Massachusetts</option>
-							<option>Michigan</option>
-							<option>Minnesota</option>
-							<option>Mississippi</option>
-							<option>Missouri</option>
-							<option>Montana</option>
-							<option>Nebraska</option>
-							<option>Nevada</option>
-							<option>New Hampshire</option>
-							<option>New Jersey</option>
-							<option>New Mexico</option>
-							<option>New York</option>
-							<option>North Carolina</option>
-							<option>North Dakota</option>
-							<option>Ohio</option>
-							<option>Oklahoma</option>
-							<option>Oregon</option>
-							<option>Pennsylvania</option>
-							<option>Rhode Island</option>
-							<option>South Carolina</option>
-							<option>South Dakota</option>
-							<option>Tennessee</option>
-							<option>Texas</option>
-							<option>Utah</option>
-							<option>Vermont</option>
-							<option>Virginia</option>
-							<option>Washington</option>
-							<option>West Virginia</option>
-							<option>Wisconsin</option>
-							<option>Wyoming</option>
-						</select>
-					</div>
-				</div>
-			
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Postal Code</label>
-					<div class="col-lg-2 controls">
-						<input class="form-control input-small" type="text" size="10" name="" />
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Phone Number</label>
-					<div class="col-lg-2 controls">	
-						<input class="form-control" type="tel" size="14" name="" />
-					</div>
-				</div>
-				
-				<blockquote class="col-lg-6 col-lg-offset-4">
-					<p>If you are not the contact, please provide contact information:</p>
-				</blockquote>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Contact Name</label>
-					<div class="col-lg-4 controls">	
-						<input class="form-control" type="text" size="40" name="_fid_80" />
-					</div>
-				</div>
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Legal Company Name</label>
+                <div class="col-lg-4 controls">
+                    <input class="form-control" type="text" size="40" name="_fid_6" />
+                </div>
+            </div>
 
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Contact Phone Number</label>
-					<div class="col-lg-2 controls">	
-						<input class="form-control" type="tel" size="14" name="_fid_27" />
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Requested Direct Deposit Limit</label>
-					<div class="col-lg-4 controls input-group">	
-						<span class="input-group-addon">$</span>
-						<input class="form-control" type="text" size="40" name="" />
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Number of Employees on Direct Deposit</label>
-					<div class="col-lg-4 controls">	
-						<input class="form-control" type="text" size="40" name="" />
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Reason for Increase Request</label>
-					<div class="col-lg-3 controls">	
-						<textarea class="form-control" rows="4" cols="75" name=""></textarea>
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">The ACH Increase Should Occur on the Check Date of:</label>
-					<div class="col-lg-2 controls">	
-						<input class="form-control" type="date" id="datepicker2" size="10" name="" />
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Additional Client Comments</label>
-					<div class="col-lg-3 controls">	
-						<textarea class="form-control" rows="4" cols="75" name=""></textarea>
-					</div>
-				</div>
-				
-				<blockquote class="col-lg-6 col-lg-offset-4">
-					
-					<p>This document contain information that is confidential and proprietary to Sage 
-					Payroll Services. Use or disclosure to third parties without the express, written 
-					consent of Sage Payroll Services is strictly prohibited.</p>
-		
-					<p>Sage, the Sage logos, and the Sage product and service names mentioned herein 
-					are registered trademarks or trademarks of Sage Software, Inc., or its affiliated entities.</p>
-		
-				</blockquote>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Authorized Signature</label>
-					<div class="col-lg-3 controls">	
-						<input class="form-control" type="text" size="40" name="" />
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Title</label>
-					<div class="col-lg-3 controls">	
-						<input class="form-control" type="text" size="40" name="" />
-					</div>
-				</div>
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Effective Termination Date</label>
+                <div class="col-lg-2 controls input-group">	
+                    <input class="form-control" type="date" id="datepicker1" size="10" name="" />
+                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                </div>
+            </div>
 
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Today's Date</label>
-					<div class="col-lg-2 controls input-group">	
-						<input class="form-control" type="date" id="datepicker3" size="10" name="" />
-						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
-					</div>
-				</div>
+            <div class="form-group">
+                <label class="col-lg-3 col-lg-offset-1 control-label">Address</label>
+                <div class="col-lg-4 controls">
+                    <input class="form-control" type="text" size="60" name="" />
+                </div>
+            </div>
 
-			</div>
+            <div class="form-group">
+                <label class="col-lg-3 col-lg-offset-1 control-label">City</label>
+                <div class="col-lg-3 controls">	
+                    <input class="form-control" type="text" size="60" name="" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">State/Region</label>
+                <div class="col-lg-2">	
+                    <select class="form-control" name="" >
+                        <option selected value>-- Please Select--</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>District of Columbia</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Postal Code</label>
+                <div class="col-lg-2 controls">
+                    <input class="form-control input-small" type="text" size="10" name="" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Phone Number</label>
+                <div class="col-lg-2 controls">	
+                    <input class="form-control" type="tel" size="14" name="" />
+                </div>
+            </div>
+
+            <blockquote class="col-lg-6 col-lg-offset-4">
+                <p>If you are not the contact, please provide contact information:</p>
+            </blockquote>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Contact Name</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="40" name="_fid_80" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Contact Phone Number</label>
+                <div class="col-lg-2 controls">	
+                    <input class="form-control" type="tel" size="14" name="_fid_27" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Requested Direct Deposit Limit</label>
+                <div class="col-lg-4 controls input-group">	
+                    <span class="input-group-addon">$</span>
+                    <input class="form-control" type="text" size="40" name="" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Number of Employees on Direct Deposit</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="40" name="" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Reason for Increase Request</label>
+                <div class="col-lg-3 controls">	
+                    <textarea class="form-control" rows="4" cols="75" name=""></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">The ACH Increase Should Occur on the Check Date of:</label>
+                <div class="col-lg-2 controls">	
+                    <input class="form-control" type="date" id="datepicker2" size="10" name="" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Additional Client Comments</label>
+                <div class="col-lg-3 controls">	
+                    <textarea class="form-control" rows="4" cols="75" name=""></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Authorized Signature</label>
+                <div class="col-lg-3 controls">	
+                    <input class="form-control" type="text" size="40" name="" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Title</label>
+                <div class="col-lg-3 controls">	
+                    <input class="form-control" type="text" size="40" name="" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Today's Date</label>
+                <div class="col-lg-2 controls input-group">	
+                    <input class="form-control" type="date" id="datepicker3" size="10" name="" />
+                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                </div>
+            </div>
+
 		</div>		
 	</fieldset>
 	
+	
+	
+	<div class="alert alert-warning">
+	    <label>
+            <input type="checkbox" name="" required/> I accept the <a href="#" data-toggle="modal" data-target="#agreement">Universal Terms &amp; Conditions</a>.
+        </label>
+	</div>
+	
 	<div class="container-fluid">
-		<div class="col-lg-2 col-lg-offset-5">
+		<div class="col-lg-2 col-lg-offset-8">
+			<button class="btn btn-gray btn-lg btn-block" type=print value=print name="Print" disabled> Print
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="col-lg-2">
 			<input type=hidden name=rdr value='http://www.paychoice.com/thankyou.html'>
-			<input class="btn btn-info btn-lg btn-block" type=submit value=Submit name="Submit">
+			<button class="btn btn-green btn-lg btn-block" type=submit value=Submit name="Submit"> Submit
 		</div>
 	</div>
 	
@@ -334,13 +330,21 @@
 
 </section>
 
+
+
 <section id="footer">
 	
 	<div class="row">
 
-		<div class="col-lg-4 col-lg-offset-4">
+        <div class="col-lg-1 col-lg-offset-1">
 			
-			<p>© 2015 <a href="index.html">Sage Payroll Services, Inc</a>. All Rights Reserved. <a href="legal.html">Legal</a></p>
+			<img src="img/lgo-sage-white.png" class="nav-brand">
+		
+		</div>
+
+		<div class="col-lg-4 col-lg-offset-5">
+			
+			<p>© 2015 <a href="https://www.sage.com/sage-products/sage-payroll">Sage Payroll Services, Inc</a>. All Rights Reserved.</p>
 		
 		</div>
 		
@@ -348,40 +352,41 @@
 	
 </section>
 
+<div class="modal fade" id="agreement">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Universal Terms &amp; Conditions</h4>
+          </div>
+          <div class="modal-body">
 
+            <p><em>Note:</em> This form is for permanent ACH limit change requests only. It may take up to two business days to review and make a decision on this request. All requests are subject to Credit Department Approval.</p>
+					
+            <p>For a one time only, extraordinary payroll exceeding current ACH limits, submit the payroll as usual through the Sage 50 product. If your Sage 50 support team has questions regarding the one time, extraordinary payroll, the support team will contact you within two hours of your payroll submission.</p>
+            <p>This document contain information that is confidential and proprietary to Sage Payroll Services. Use or disclosure to third parties without the express, written consent of Sage Payroll Services is strictly prohibited.</p>
+		
+            <p>Sage, the Sage logos, and the Sage product and service names mentioned herein are registered trademarks or trademarks of Sage Software, Inc., or its affiliated entities.</p>
 
-<script lang="javascript">
-		function CheckForOther (item, origlen)
-			{
-			var sitem = item.options[item.selectedIndex];
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-			if (item.selectedIndex == (item.length - 1))
-				{
-				var val = prompt ("ADD A NEW CHOICE:", "");
-
-				if (val == null)
-					item.selectedIndex = 0;
-				else	
-					{
-					var slen = item.length;
-
-					if (slen == origlen+1){
-						item.options[slen] = new Option (sitem.text, sitem.value);
-      	          		}
-			
-					item.options[item.length-2].text = val;
-					item.options[item.length-2].value = val;
-					item.selectedIndex = item.length-2;
-					}
-				}
-			}
-</script>
+<script type="text/javascript" src="js/date-picker.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/form-validation.js"></script>
+<script type="text/javascript" src="js/check-for-other.js"></script>
 
 <script lang=javascript>
 		function validateForm(theForm)
 		{
 			}
 </script>
+
 </body>
 
 </html>

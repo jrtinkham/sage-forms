@@ -1,0 +1,221 @@
+// ===================
+// Base
+// ===================
+
+	* {
+		font-family: 'Calibri', Arial, Helvetica, sans-serif;
+		vertical-align: middle;
+        color: #3C3E42;
+        display: block;
+	}
+
+    html {
+		margin: 0 auto;
+        max-width: 1366px;
+        background-color: #C0C0C0;
+	}
+
+    h1, h2 > p {
+        font-size: 1.2em;
+    }
+
+    h1, h2 > p, ul {
+         line-height: 2em;   
+    }
+	
+	body {
+		background-color: #FFF;
+	}
+
+	a {
+		color: #3EA7DD;
+	}
+
+	a, input[type=submit] {
+		text-decoration: none;
+	}
+	
+	a:hover, button:hover, .btn-green:hover, .btn-gray:hover {
+		text-decoration: underline;
+	}
+
+    button:hover, .btn-green:hover, .btn-gray:hover {
+        color: #FFF;   
+    }
+	
+	h1, h2 {
+		text-align: left;
+    }
+        
+    h1, h2, p, label {
+        color: #3C3E42;
+        font-weight: 200;
+	}
+	
+	h1 {
+		font-size: 2.2em;
+        font-weight: 500;
+	}
+	
+	h2 {
+		font-size: 1.8em;
+	}
+	
+	fieldset, input[type=submit], .btn-green, .btn-gray, btn-blue {
+		border-radius: 3px;
+	}
+	
+	.navbar {
+		-webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+		-moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+		box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+		background-color: #FFF;
+	}
+
+	#footer {
+		text-align: center;
+   		height: 40px;
+	}
+	
+	#header, #main, #footer {
+		clear: both;
+	}
+	
+	blockquote {
+		text-align: justify;
+    	text-justify: inter-word;
+    	font-style: italic;
+	}
+	
+	blockquote p {
+		font-size: 14px;
+	}
+
+    fieldset p {
+        padding-bottom: 10px;
+    }
+
+
+// ===================
+// Layout
+// ===================
+
+    h1 {
+        margin-top: 0px;   
+    }
+
+    h2 {
+        padding-bottom: 15px;   
+    }
+
+    fieldset {
+        padding: 10px 0;
+        margin-bottom: 50px;   
+    }
+	
+	img {
+		padding: 10px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	
+	.nav-brand {
+		width: auto;
+		height: 20px;
+		padding: 0px;
+	}
+	
+	.logo, .fieldset-body, #footer, .page-top {
+		padding-top: 10px;
+	}
+
+	.page-top {
+		height: 40px;
+        margin: 0px;
+	}
+
+    .btn-blue, .btn-blue a {
+        margin: 0;
+        padding: 5px;
+        position: fixed;
+        top: 20%;
+        right: 0;
+        width: 125px;
+        height: 70px;
+        z-index: 100;
+        color: #FFF;
+        border: 1px solid #26B9E0;
+        font-size: 1.2em;
+    }
+
+    #main {
+        margin-top: 25px;
+        margin-bottom: 50px;   
+    }
+
+// ===================
+// Module
+// ===================
+
+
+// ===================
+// State
+// ===================
+
+
+
+// ===================
+// Theme
+// ===================
+	
+		
+		.logo, img, #main {
+			background-color: #FFF;
+		}
+		
+		#footer, .page-top {
+			background-color: #3C3D41;
+            color: #fff;
+		}
+
+        .btn-green, .btn-gray, #footer, .page-top, .btn-blue {
+            color: #FFF;
+            
+        }
+
+        .btn-blue {
+            background-color: #138ED2; 
+            text-align: center;
+            -webkit-box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.3);
+		    -moz-box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.3);
+		    box-shadow: 0px 4px 5px 2px rgba(0,0,0,0.3);
+            
+        }
+
+        fieldset, h2 {
+            border-bottom: solid 1px #C0C0C0;
+        }
+
+        .btn-green {
+            background-color: #3BA231;
+        }
+
+        .btn-gray {
+            background-color: #898A8B;
+        }
+
+        #footer p {
+            color: #FFF;   
+        }
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }
