@@ -9,15 +9,32 @@
 
 <title>Direct Deposit Service Agreement | Sage Payroll Services</title>
 
+<!-- Bootstrap CSS v3.0.0 or higher -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+
+<!-- FormValidation CSS file -->
+<link rel="stylesheet" href="/vendor/formvalidation/dist/css/formValidation.min.css">
+
+<!-- jQuery UI Theme CSS file -->
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+<!-- Sage Payroll CSS file -->
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 
+<!-- jQuery v1.9.1 or higher -->
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<!-- FormValidation plugin and the class supports validating Bootstrap form -->
+<script src="/vendor/formvalidation/dist/js/formValidation.min.js"></script>
+<script src="/vendor/formvalidation/dist/js/framework/bootstrap.min.js"></script>
+
+<!-- Back To Top plugin -->
 <script type="text/javascript" src="js/back-to-top.js"></script>
 
 </head>
@@ -409,6 +426,57 @@
                 <div class="col-lg-2">	
                     <select class="form-control" name="" required>
                         <option selected value>-- Please Select--</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>District of Columbia</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
                     </select>
                 </div>
             </div>
@@ -1111,6 +1179,18 @@
 		function validateForm(theForm)
 		{
 			}
+</script>
+
+<script src="modernizr.js"></script>
+<script>Modernizr.load({
+  test: Modernizr.inputtypes.date,
+  nope: ['http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js', 'jquery-ui.css'],
+  complete: function () {
+    $('input[type=date]').datepicker({
+      dateFormat: 'yy-mm-dd'
+    }); 
+  }
+});
 </script>
 
 </body>

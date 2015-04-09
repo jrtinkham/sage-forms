@@ -5,12 +5,22 @@
   $(function() {
   
     // Setup form validation on the #register-form element
-    $("#register-form").validate({
+    $("qdbform").validate({
     
         // Specify the validation rules
         rules: {
-            firstname: "required",
-            lastname: "required",
+            _fid_55: "required",
+            _fid_85: {
+                required: true,
+                minlength: 9
+            },
+            _fid_86: "required",
+            _fid_87: "required"
+            _fid_88: 
+            _fid_89:
+            _fid_90:
+            _fid_91:
+            
             email: {
                 required: true,
                 email: true
@@ -24,8 +34,8 @@
         
         // Specify the validation error messages
         messages: {
-            firstname: "Please enter your first name",
-            lastname: "Please enter your last name",
+            _fid_55:: "Please enter the name of the business owner.",
+            _fid_85: "Please enter the business owner's social security number (SSN).",
             password: {
                 required: "Please provide a password",
                 minlength: "Your password must be at least 5 characters long"

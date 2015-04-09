@@ -1,3 +1,15 @@
+/*
+  Back To Top
+  ======================
+
+  This is meant to animate the back-to-top button 
+  
+  Code and tutorial by Nick La of Web Designer Wall
+  Source:
+  http://webdesignerwall.com/tutorials/animated-scroll-to-top
+
+*/
+
 $(document).ready(function(){
 
 	// hide #back-top first
