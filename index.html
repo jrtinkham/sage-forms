@@ -7,24 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Sage Payroll Services Forms | Sage Payroll Services</title>
+<title>Direct Deposit Service Agreement | Sage Payroll Services</title>
 
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script>
-	$(function() {
-		$("#datepicker1").datepicker();
-		$("#datepicker2").datepicker();
-	});
-</script>
+<script type="text/javascript" src="js/back-to-top.js"></script>
+
 </head>
 
 
@@ -67,15 +62,15 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="index.html"><img src="lgo-sage.png" class="nav-brand" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" /></a>
+			  <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="nav-brand" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" /></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
 				<li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-				<li><a href="sage-client-reversal.html">Client Reversal</a></li>
 				<li><a href="sage-direct-deposit.html">Direct Deposit</a></li>
+				<li><a href="sage-client-reversal.html">Client Reversal</a></li>
 				<li><a href="sage-limit-increase.html">Limit Increase</a></li>
 				<li><a href="sage-reverse-withdrawal.html">Reverse Withdrawal</a></li>
 				<li><a href="sage-term-request.html">Term Request</a></li>
@@ -83,84 +78,81 @@
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-		
-		<div class="logo row">
-			<div class="col-lg-4 col-lg-offset-4">
-				<img src="logo.png" class="img-responsive" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" />
-			</div>
-		</div>
-	
 
-		<div class="page-header row">
-			<div class="col-lg-12">
-				<h1>Sage Payroll Services Forms</h1>
-			</div>
-		</div>
-		
 	</div>
 	
-</section>
+    
+    <div class="btn-blue" id="back-top">
+        <a href="#">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span>
+            <div>Top of Page</div>
+        </a>
+    </div>
+	
+</section>	
+
+
 
 <section id="main" class="col-lg-10 col-lg-offset-1">
-
-
+    
+    <h1>Sage Payroll Services Forms</h1>
 
 </section>
+
+
 
 <section id="footer">
 	
 	<div class="row">
-	
-		<div class="col-lg-4">
+
+        <div class="col-lg-1 col-lg-offset-1">
 			
-			<p class="repo-owner"><a href="https://github.com/jrtinkham/sage-forms">Sage-Forms Project Page</a> is maintained by <a href="https://github.com/jrtinkham">jrtinkham</a>.</p>
-        
-        </div>
-	
-		<div class="col-lg-4 col-lg-offset-2">
+			<img src="img/lgo-sage-white.png" class="nav-brand">
+		
+		</div>
 
-			<p>© 2015 <a href="index.html">Sage Payroll Services, Inc</a>. All Rights Reserved. <a href="legal.html">Legal</a></p>
-
+		<div class="col-lg-4 col-lg-offset-5">
+			
+			<p>© 2015 <a href="https://www.sage.com/sage-products/sage-payroll">Sage Payroll Services, Inc</a>. All Rights Reserved.</p>
+		
 		</div>
 		
 	</div>
 	
 </section>
 
+<div class="modal fade" id="agreement">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Universal Terms &amp; Conditions</h4>
+          </div>
+          <div class="modal-body">
 
+            <p>This agreement may be considered an application for credit and authorizes Sage Payroll Service to investigate the credit of the client or its principal including vendor references, bank account status, and history. Additional fees may apply. Sage 50 Accounting Software is a licensed product of Sage Software, Inc. that the client has purchased from Sage (and will maintain with Sage) and the client has asked Sage Payroll Services to use that interface to produce the direct deposit information by Sage Payroll Services.</p>
 
-<script lang="javascript">
-		function CheckForOther (item, origlen)
-			{
-			var sitem = item.options[item.selectedIndex];
+            <p>The agreement will authorize Sage Payroll Services to initiate debit/credit entries to the Checking/Savings Account at the depository financial institution ("Bank") as indicated on the Direct Deposit Service Agreement.</p>
 
-			if (item.selectedIndex == (item.length - 1))
-				{
-				var val = prompt ("ADD A NEW CHOICE:", "");
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-				if (val == null)
-					item.selectedIndex = 0;
-				else	
-					{
-					var slen = item.length;
-
-					if (slen == origlen+1){
-						item.options[slen] = new Option (sitem.text, sitem.value);
-      	          		}
-			
-					item.options[item.length-2].text = val;
-					item.options[item.length-2].value = val;
-					item.selectedIndex = item.length-2;
-					}
-				}
-			}
-</script>
+<script type="text/javascript" src="js/date-picker.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/form-validation.js"></script>
+<script type="text/javascript" src="js/check-for-other.js"></script>
 
 <script lang=javascript>
 		function validateForm(theForm)
 		{
 			}
 </script>
+
 </body>
 
 </html>

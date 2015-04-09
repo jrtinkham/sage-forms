@@ -7,26 +7,20 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Client Reversal Authorization | Sage Payroll Services</title>
+<title>Direct Deposit Service Agreement | Sage Payroll Services</title>
 
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script>
-	$(function() {
-		$("#datepicker1").datepicker();
-		$("#datepicker2").datepicker();
-	});
-</script>
-</head>
+<script type="text/javascript" src="js/back-to-top.js"></script>
 
+</head>
 
 <body>
 
@@ -35,7 +29,7 @@
 	<div class="container-fluid">
 	
 		<div class="page-top row">
-			<div class="col-lg-12">	
+			<div>	
 				<p> </p>
 			</div>
 		</div>
@@ -50,15 +44,15 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </button>
-			  <a class="navbar-brand" href="index.html"><img src="lgo-sage.png" class="nav-brand" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" /></a>
+			  <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="nav-brand" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" /></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
 				<li><a href="index.html">Home</a></li>
-				<li class="active"><a href="sage-client-reversal.html">Client Reversal <span class="sr-only">(current)</span></a></li>
 				<li><a href="sage-direct-deposit.html">Direct Deposit</a></li>
+				<li class="active"><a href="sage-client-reversal.html">Client Reversal <span class="sr-only">(current)</span></a></li>
 				<li><a href="sage-limit-increase.html">Limit Increase</a></li>
 				<li><a href="sage-reverse-withdrawal.html">Reverse Withdrawal</a></li>
 				<li><a href="sage-term-request.html">Term Request</a></li>
@@ -66,138 +60,109 @@
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-		
-		<div class="logo row">
-			<div class="col-lg-4 col-lg-offset-4">
-				<img src="logo.png" class="img-responsive" alt="Sage Payroll Services Powered By PayChoice Logo" longdesc="Sage Payroll Services Powered By PayChoice Logo" />
-			</div>
-		</div>
-	
 
-		<div class="page-header row">
-			<div class="col-lg-12">
-				<h1>Client Reversal Authorization</h1>
-			</div>
-		</div>
-		
 	</div>
 	
-</section>
+    
+    <div class="btn-blue" id="back-top">
+        <a href="#">
+            <span class="glyphicon glyphicon-circle-arrow-up"></span>
+            <div>Top of Page</div>
+        </a>
+    </div>
+	
+</section>	
+
+
 
 <section id="main" class="col-lg-10 col-lg-offset-1">
+
+    <h1>Client Reversal Authorization</h1>
+    
+    <p>Please fill out the form below to apply for the Sage 50 Direct Deposit client reversal authorization. All fields noted with an asterisk (*) are required.</p>
 	
 	<form class="form-horizontal" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=https://paychoice.quickbase.com/db/bjiga5tiu?act=API_AddRecord&apptoken=cwfcy7gdzqrsyncqbi2bn4u4kr>
 	
 	<input class="form-control" type=hidden name=fform value=1>	
 	
-	<fieldset name="Client Information">
+	<fieldset name="Client Reversal Authorization">
 		
 		<div class="container-fluid">
 				
-			<div class="fieldset-header">
-				
-				<h2> </h2>
-				
-			</div>
-			
-			<div class="fieldset-body">
-			
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Company Name (as it appears on your account)</label>
-					<div class="col-lg-4 controls">	
-						<input class="form-control" type="text" size="40" name="_fid_6" />
-					</div>
-				</div>
+            <h2> </h2>
 
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Sage Customer ID</label>
-					<div class="col-lg-4 controls">
-						<input class="form-control" type="text" size="40" name="_fid_22" />
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Contact Name</label>
-					<div class="col-lg-4 controls">	
-						<input class="form-control" type="text" size="40" name="_fid_80" />
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Phone Number</label>
-					<div class="col-lg-2 controls">	
-						<input class="form-control" type="tel" size="14" name="_fid_27" />
-					</div>
-				</div>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Check Date</label>
-					<div class="col-lg-2 controls input-group">	
-						<input class="form-control" type="date" id="datepicker1" size="10" name="" />
-						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
-					</div>
-				</div>
-				
-				<blockquote class="col-lg-6 col-lg-offset-4">
-					<p>We request that you reverse or delete the entries set forth below. Each 
-					reversal or deletion is being requested to correct an erroneous credit to an 
-					employee's bank account and the amount being reversed/deleted is due and owing to 
-					us. If this request is received by you in time to permit you stop the payment to 
-					the affected employee, we request that you do so. If this request is received 
-					after such time, we request that you revers such payment by debiting the employee's 
-					account or accounts. We understand that requests for reversals must be received 
-					by Sage 50 Direct Deposit no later than the close of business on the fourth 
-					banking day following the date of the direct deposit into the employee's account. We 
-					also agree to inform each affected employee of the requested reversal no later than 
-					the &quot;Settlement Date&quot; of the reversal entry and of the reason for reversal. The 
-					&quot;Settlement Date&quot; of the reversing entry is generally the pay date of the payroll 
-					or the next banking day after our receipt of your request, whichever is later.</p>
-					
-					<p>We acknowledge that you may be unable to successfully reverse an erroneous credit. We 
-					hereby agree to indemnify and hold you harmless from any liability, claim or damages 
-					that may result from your attempts to delete or revers the entries as requested by us.</p>
-					
-					<p>We acknowledge that we will be charged a $35.00 processing fee for this request 
-					and that this fee will be debited directly from our bank account.</p>
-					
-				</blockquote>
-				
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Signature</label>
-					<div class="col-lg-3 controls">	
-						<input class="form-control" type="text" size="40" name="" />
-					</div>
-				</div>
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Company Name (as it appears on your account)</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="40" name="_fid_6" />
+                </div>
+            </div>
 
-				<div class="form-group">	
-					<label class="col-lg-3 col-lg-offset-1 control-label">Today's Date</label>
-					<div class="col-lg-2 controls input-group">	
-						<input class="form-control" type="date" id="datepicker2" size="10" name="" />
-						<span class="input-group-addon glyphicon glyphicon-calendar"></span>
-					</div>
-				</div>
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Sage Customer ID</label>
+                <div class="col-lg-4 controls">
+                    <input class="form-control" type="text" size="40" name="_fid_22" />
+                </div>
+            </div>
 
-				<blockquote class="col-lg-6 col-lg-offset-4">
-					
-					<p>Please make copies, complete, and sign additional forms if more reversals are required. 
-					Complete and sign separate forms if reversals are required on additional companies. Please 
-					use one box per individual employee deposit reversal. If employee has multiple direct 
-					deposits to reverse, use multiple boxes. If a reversal is successful, it may take up to 
-					five business days to reimburse the funds.</p>
-		
-					<p>Sage, the Sage logos, and the Sage product and service names mentioned herein 
-					are registered trademarks or trademarks of Sage Software, Inc., or its affiliated entities.</p>
-		
-				</blockquote>
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Contact Name</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="40" name="_fid_80" />
+                </div>
+            </div>
 
-			</div>
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Phone Number</label>
+                <div class="col-lg-2 controls">	
+                    <input class="form-control" type="tel" size="14" name="_fid_27" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Check Date</label>
+                <div class="col-lg-2 controls input-group">	
+                    <input class="form-control" type="date" id="datepicker1" size="10" name="" />
+                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Signature</label>
+                <div class="col-lg-3 controls">	
+                    <input class="form-control" type="text" size="40" name="" />
+                </div>
+            </div>
+
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Today's Date</label>
+                <div class="col-lg-2 controls input-group">	
+                    <input class="form-control" type="date" id="datepicker2" size="10" name="" />
+                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                </div>
+            </div>
+
 		</div>		
 	</fieldset>
 	
+	
+	
+	<div class="alert alert-warning">
+	    <label>
+            <input type="checkbox" name="" required/> I accept the <a href="#" data-toggle="modal" data-target="#agreement">Universal Terms &amp; Conditions</a>.
+        </label>
+	</div>
+	
 	<div class="container-fluid">
-		<div class="col-lg-2 col-lg-offset-5">
+		<div class="col-lg-2 col-lg-offset-8">
+			<button class="btn btn-gray btn-lg btn-block" type=print value=print name="Print" disabled> Print
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="col-lg-2">
 			<input type=hidden name=rdr value='http://www.paychoice.com/thankyou.html'>
-			<input class="btn btn-info btn-lg btn-block" type=submit value=Submit name="Submit">
+			<button class="btn btn-green btn-lg btn-block" type=submit value=Submit name="Submit"> Submit
 		</div>
 	</div>
 	
@@ -205,13 +170,21 @@
 
 </section>
 
+
+
 <section id="footer">
 	
 	<div class="row">
 
-		<div class="col-lg-4 col-lg-offset-4">
+        <div class="col-lg-1 col-lg-offset-1">
 			
-			<p>© 2015 <a href="index.html">Sage Payroll Services, Inc</a>. All Rights Reserved. <a href="legal.html">Legal</a></p>
+			<img src="img/lgo-sage-white.png" class="nav-brand">
+		
+		</div>
+
+		<div class="col-lg-4 col-lg-offset-5">
+			
+			<p>© 2015 <a href="https://www.sage.com/sage-products/sage-payroll">Sage Payroll Services, Inc</a>. All Rights Reserved.</p>
 		
 		</div>
 		
@@ -219,40 +192,44 @@
 	
 </section>
 
+<div class="modal fade" id="agreement">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Universal Terms &amp; Conditions</h4>
+          </div>
+          <div class="modal-body">
 
+            <p>We request that you reverse or delete the entries set forth below. Each reversal or deletion is being requested to correct an erroneous credit to an employee's bank account and the amount being reversed/deleted is due and owing to us. If this request is received by you in time to permit you stop the payment to the affected employee, we request that you do so. If this request is received after such time, we request that you revers such payment by debiting the employee's account or accounts. We understand that requests for reversals must be received by Sage 50 Direct Deposit no later than the close of business on the fourth banking day following the date of the direct deposit into the employee's account. We also agree to inform each affected employee of the requested reversal no later than the &quot;Settlement Date&quot; of the reversal entry and of the reason for reversal. The &quot;Settlement Date&quot; of the reversing entry is generally the pay date of the payroll or the next banking day after our receipt of your request, whichever is later.</p>
 
-<script lang="javascript">
-		function CheckForOther (item, origlen)
-			{
-			var sitem = item.options[item.selectedIndex];
+            <p>We acknowledge that you may be unable to successfully reverse an erroneous credit. We hereby agree to indemnify and hold you harmless from any liability, claim or damages that may result from your attempts to delete or revers the entries as requested by us.</p>
 
-			if (item.selectedIndex == (item.length - 1))
-				{
-				var val = prompt ("ADD A NEW CHOICE:", "");
+            <p>We acknowledge that we will be charged a $35.00 processing fee for this request and that this fee will be debited directly from our bank account.</p>
+            
+            <p>Please make copies, complete, and sign additional forms if more reversals are required. Complete and sign separate forms if reversals are required on additional companies. Please use one box per individual employee deposit reversal. If employee has multiple direct deposits to reverse, use multiple boxes. If a reversal is successful, it may take up to five business days to reimburse the funds.</p>
 
-				if (val == null)
-					item.selectedIndex = 0;
-				else	
-					{
-					var slen = item.length;
+            <p>Sage, the Sage logos, and the Sage product and service names mentioned herein are registered trademarks or trademarks of Sage Software, Inc., or its affiliated entities.</p>
 
-					if (slen == origlen+1){
-						item.options[slen] = new Option (sitem.text, sitem.value);
-      	          		}
-			
-					item.options[item.length-2].text = val;
-					item.options[item.length-2].value = val;
-					item.selectedIndex = item.length-2;
-					}
-				}
-			}
-</script>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript" src="js/date-picker.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/form-validation.js"></script>
+<script type="text/javascript" src="js/check-for-other.js"></script>
 
 <script lang=javascript>
 		function validateForm(theForm)
 		{
 			}
 </script>
+
 </body>
 
 </html>
