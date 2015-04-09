@@ -40,6 +40,9 @@
 <!-- Modernizr to fix issues with HTML date pickers -->
 <script type="text/javascript" src="js/modernizr-latest.js"></script>
 
+<!-- Auto Fill JS file -->
+<script type="text/javascript" src="js/autofill.js"></script>
+
 </head>
 
 <body>
@@ -134,21 +137,21 @@
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Business Owner Address*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_86" placeholder="Unit/Suite/Room No., Building No., Street name, etc." required/>
+                    <input class="form-control" type="text" size="60" name="_fid_86" placeholder="Street name" required/>
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_87" />
+                    <input class="form-control" type="text" size="60" name="_fid_87" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_88" />
+                    <input class="form-control" type="text" size="60" name="_fid_88" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
@@ -254,21 +257,21 @@
             <div class="form-group">
                 <label class="col-lg-3 col-lg-offset-1 control-label">Business Address*</label>
                 <div class="col-lg-4 controls">
-                    <input class="form-control" type="text" size="60" name="_fid_44" placeholder="Unit/Suite/Room No., Building No., Street name, etc." required/>
+                    <input class="form-control" type="text" size="60" name="_fid_44" placeholder="Street name" required/>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
                 <div class="col-lg-4 controls">
-                    <input class="form-control" type="text" size="60" name="_fid_45" />
+                    <input class="form-control" type="text" size="60" name="_fid_45" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
                 <div class="col-lg-4 controls">
-                    <input class="form-control" type="text" size="60" name="_fid_46" />
+                    <input class="form-control" type="text" size="60" name="_fid_46" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
@@ -353,10 +356,10 @@
                 </div>
             </div>
 
-            <div class="form-group">	
+            <div class="form-group" hidden>	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Billing Contact Name</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_26" />
+                    <input class="form-control" type="text" size="40" name="_fid_80" />
                 </div>
             </div>
 
@@ -514,17 +517,6 @@
                 </div>
             </div>
 
-            <div class="form-group hidden">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Send to G/L</label>
-                <div class="col-lg-2">	
-                    <select class="form-control" name=_fid_34 >
-                        <option selected value>-- Please Select--</option>
-                        <option>No</option>
-                        <option>Yes</option>
-                    </select>
-                </div>
-            </div>
-
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Sage Customer ID</label>
                 <div class="col-lg-3 controls">	
@@ -561,8 +553,9 @@
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Preferred PIN Number</label>
                 <div class="col-lg-1 controls">	
-                    <input class="form-control" type="text" size="10" name="_fid_123" />
+                    <input class="form-control" type="text" pattern="[0-9]*" inputmode="numeric" size="4" maxlength="4" aria-describedby="pinHelp" name="_fid_123" />
                 </div>
+                <span id="pinHelp" class="help-block col-lg-3 text-info">Please choose and remember a 4-digit PIN number for future reference.</span>
             </div>
 
 		</div>		
@@ -578,49 +571,49 @@
 
             <p>
                 <label>
-                    <input type="checkbox" name="" /> Use the same contact details as entered in <a href="#business-information">Business Information</a> section above.
+                    <input type="checkbox" id="auto-fill" name="" /> Use the same contact details as entered in <a href="#business-information">Business Information</a> section above.
                 </label>
             </p>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Payroll Name*</label>
+                <label class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Name*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_80" required/>
+                    <input class="form-control" type="text" size="40" name="_fid_26" required/>
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Address*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_113" placeholder="Unit/Suite/Room No., Building No., Street name, etc." required/>
+                    <input class="form-control" type="text" size="60" name="_fid_113" placeholder="Street name" required/>
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_114" />
+                    <input class="form-control" type="text" size="60" name="_fid_114" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_115" />
+                    <input class="form-control" type="text" size="60" name="_fid_115" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">City*</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type=text size=60 name=_fid_116 required/>
+                    <input class="form-control" type=text size=60 name="_fid_116" required/>
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">State / Region*</label>
                 <div class="col-lg-2">	
-                    <select class="form-control" name=_fid_117 required>
+                    <select class="form-control" name="_fid_117" required>
                         <option selected value>-- Please Select--</option>
                         <option>Alabama</option>
                         <option>Alaska</option>
@@ -685,14 +678,14 @@
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Billing Phone*</label>
+                <label class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Phone*</label>
                 <div class="col-lg-3 controls">	
                     <input class="form-control" type="tel" size="14" name="_fid_27" />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Billing E-mail Address*</label>
+                <label class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact E-mail Address*</label>
                 <div class="col-lg-3 controls">	
                     <input class="form-control" type="email" size="40" name="_fid_28" required/>
                 </div>
@@ -740,21 +733,21 @@
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Funding Bank Address*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_99" required/>
+                    <input class="form-control" type="text" size="60" name="_fid_99" required placeholder="Street name" />
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_100" />
+                    <input class="form-control" type="text" size="60" name="_fid_100" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_101" />
+                    <input class="form-control" type="text" size="60" name="_fid_101" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
@@ -906,21 +899,21 @@
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Address*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_106" required/>
+                    <input class="form-control" type="text" size="60" name="_fid_106" required placeholder="Street name" />
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_107" />
+                    <input class="form-control" type="text" size="60" name="_fid_107" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
             <div class="form-group">	
                 <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_108" />
+                    <input class="form-control" type="text" size="60" name="_fid_108" placeholder="Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
@@ -1074,6 +1067,17 @@
                 <label class="col-lg-3 col-lg-offset-1 control-label">Referring Business Partner ID (BPID)</label>
                 <div class="col-lg-3 controls">	
                     <input class="form-control" type="text" size="40" name="_fid_35" />
+                </div>
+            </div>
+            
+            <div class="form-group">	
+                <label class="col-lg-3 col-lg-offset-1 control-label">Send to G/L</label>
+                <div class="col-lg-2">	
+                    <select class="form-control" name=_fid_34 >
+                        <option selected value>-- Please Select--</option>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
                 </div>
             </div>
 

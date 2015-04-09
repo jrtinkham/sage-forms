@@ -15,11 +15,11 @@
         background-color: #C0C0C0;
 	}
 
-    #main p {
+    h1, h2 > p {
         font-size: 1.2em;
     }
 
-    #main p, ul {
+    h1, h2 > p, ul {
          line-height: 2em;   
     }
 	
