@@ -30,15 +30,15 @@
 <!-- Bootstrap JS -->
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-<!-- FormValidation plugin and the class supports validating Bootstrap form -->
-<script src="/vendor/formvalidation/dist/js/formValidation.min.js"></script>
-<script src="/vendor/formvalidation/dist/js/framework/bootstrap.min.js"></script>
+<!-- jQuery Validation -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script src="hhttp://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js"></script>
+<script type="text/javascript" src="js/form-validation.js"></script>
 
 <!-- Back To Top plugin -->
 <script type="text/javascript" src="js/back-to-top.js"></script>
-
-<!-- Modernizr to fix issues with HTML date pickers -->
-<script type="text/javascript" src="js/modernizr.custom.67157.js"></script>
 
 <!-- Auto Fill JS file -->
 <script type="text/javascript" src="js/autofill.js"></script>
@@ -136,7 +136,7 @@
 	</ul>
 	
 	
-	<form class="form-horizontal" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=https://paychoice.quickbase.com/db/bjiga5tiu?act=API_AddRecord&apptoken=cwfcy7gdzqrsyncqbi2bn4u4kr>
+	<form class="form-horizontal" id="qdbform" name="qdbform" method="post" onsubmit='return validateForm(this)' encType='multipart/form-data' action=https://paychoice.quickbase.com/db/bjiga5tiu?act=API_AddRecord&apptoken=cwfcy7gdzqrsyncqbi2bn4u4kr>
 	
 	<input class="form-control" type=hidden name=fform value=1>	
 	
@@ -147,52 +147,38 @@
             <h2>Business Owner Information</h2>
 			
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Business Owner*</label>
+                <label for="_fid_55" class="col-lg-3 col-lg-offset-1 control-label">Business Owner Name*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_55" required/>
+                    <input class="form-control" type="text" size="40" name="_fid_55" id="_fid_55" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Social Security Number (SSN)*</label>
+                <label for="_fid_85" class="col-lg-3 col-lg-offset-1 control-label">Social Security Number (SSN)*</label>
                 <div class="col-lg-2 controls">	
-                    <input class="form-control" type="text" size="11" name="_fid_85" required/>
+                    <input class="form-control" type="text" size="11" name="_fid_85" id="_fid_85" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Business Owner Address*</label>
+                <label for="_fid_86" class="col-lg-3 col-lg-offset-1 control-label">Business Owner Address*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_86" placeholder="Street name" required/>
+                    <input class="form-control" type="text" size="60" name="_fid_86" id="_fid_86" placeholder="Street Name, Unit/Suite/Room No., Building No., etc." required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
-                <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_87" placeholder="Unit/Suite/Room No., Building No., etc." />
-                </div>
-            </div>
-
-            <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
-                <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_88" placeholder="Unit/Suite/Room No., Building No., etc." />
-                </div>
-            </div>
-
-            <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">City*</label>
+                <label for="_fid_89" class="col-lg-3 col-lg-offset-1 control-label">City*</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type=text size=60 name="_fid_89" required/>
+                    <input class="form-control" type=text size=60 name="_fid_89" id="_fid_89" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">State / Region*</label>
-                <div class="col-lg-3">	
-                    <select class="form-control" name="_fid_90" required>
-                        <option selected value>-- Please Select--</option>
+                <label for="_fid_90" class="col-lg-3 col-lg-offset-1 control-label">State / Region*</label>
+                <div class="col-lg-3">
+                    <select class="form-control" name="_fid_90" id="_fid_90" required>
+                        <option selected></option>
                         <option>Alabama</option>
                         <option>Alaska</option>
                         <option>Arizona</option>
@@ -249,9 +235,9 @@
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Zip Code*</label>
+                <label for="_fid_91" class="col-lg-3 col-lg-offset-1 control-label">Zip Code*</label>
                 <div class="col-lg-2 controls">	
-                    <input class="form-control" type="text" size="10" name="_fid_91" required/>
+                    <input class="form-control" type="text" size="10" name="_fid_91" id="_fid_91" required/>
                 </div>
             </div>
 				
@@ -267,52 +253,38 @@
             <h2>Business Information</h2>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Legal Name*</label>
+                <label for="_fid_6" class="col-lg-3 col-lg-offset-1 control-label">Legal Name*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_6" required/>
+                    <input class="form-control" type="text" size="40" name="_fid_6" id="_fid_6" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Doing Business As (DBA)</label>
+                <label for="_fid_10" class="col-lg-3 col-lg-offset-1 control-label">Doing Business As (DBA)</label>
                 <div class="col-lg-4 controls">
-                    <input class="form-control" type="text" size="40" name="_fid_10" />
+                    <input class="form-control" type="text" size="40" name="_fid_10" id="_fid_10" />
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-lg-3 col-lg-offset-1 control-label">Business Address*</label>
+                <label for="_fid_44" class="col-lg-3 col-lg-offset-1 control-label">Business Address*</label>
                 <div class="col-lg-4 controls">
-                    <input class="form-control" type="text" size="60" name="_fid_44" placeholder="Street name" required/>
+                    <input class="form-control" type="text" size="60" name="_fid_44" id="_fid_44" placeholder="Street Name, Unit/Suite/Room No., Building No., etc." required/>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
-                <div class="col-lg-4 controls">
-                    <input class="form-control" type="text" size="60" name="_fid_45" placeholder="Unit/Suite/Room No., Building No., etc." />
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
-                <div class="col-lg-4 controls">
-                    <input class="form-control" type="text" size="60" name="_fid_46" placeholder="Unit/Suite/Room No., Building No., etc." />
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-lg-3 col-lg-offset-1 control-label">City*</label>
+                <label for="_fid_47" class="col-lg-3 col-lg-offset-1 control-label">City*</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_47" required/>
+                    <input class="form-control" type="text" size="60" name="_fid_47" id="_fid_47" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">State / Region*</label>
-                <div class="col-lg-3">	
-                    <select class="form-control" name="_fid_48" required>
-                        <option selected value>-- Please Select--</option>
+                <label for="_fid_48" class="col-lg-3 col-lg-offset-1 control-label">State / Region*</label>
+                <div class="col-lg-3">
+                    <select class="form-control" name="_fid_48" id="_fid_48" required>
+                        <option selected></option>
                         <option>Alabama</option>
                         <option>Alaska</option>
                         <option>Arizona</option>
@@ -369,90 +341,90 @@
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Zip Code*</label>
+                <label for="_fid_49" class="col-lg-3 col-lg-offset-1 control-label">Zip Code*</label>
                 <div class="col-lg-2 controls">
-                    <input class="form-control input-small" type="text" size="10" name="_fid_49" required/>
+                    <input class="form-control input-small" type="text" size="10" name="_fid_49" id="_fid_49" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Business Contact Name</label>
+                <label for="_fid_60" class="col-lg-3 col-lg-offset-1 control-label">Business Contact Name</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_60" />
+                    <input class="form-control" type="text" size="40" name="_fid_60" id="_fid_60" />
                 </div>
             </div>
 
             <div class="form-group" hidden>	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Billing Contact Name</label>
+                <label for="_fid_80" class="col-lg-3 col-lg-offset-1 control-label">Billing Contact Name</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_80" />
+                    <input class="form-control" type="text" size="40" name="_fid_80" id="_fid_80" />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Business Phone*</label>
+                <label id="_fid_58" class="col-lg-3 col-lg-offset-1 control-label">Business Phone*</label>
                 <div class="col-lg-2 controls">	
-                    <input class="form-control" type="tel" size="14" name="_fid_58" required/>
+                    <input class="form-control" type="tel" size="14" name="_fid_58" id="_fid_58" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Mobile Phone*</label>
+                <label for="_fid_51" class="col-lg-3 col-lg-offset-1 control-label">Mobile Phone*</label>
                 <div class="col-lg-2 controls">	
-                    <input class="form-control" type="tel" size="14" name="_fid_51" required/>
+                    <input class="form-control" type="tel" size="14" name="_fid_51" id="_fid_51" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Business Fax*</label>
+                <label for="_fid_59" class="col-lg-3 col-lg-offset-1 control-label">Business Fax*</label>
                 <div class="col-lg-2 controls">	
-                    <input class="form-control" type="tel" size="14" name="_fid_59" required/>
+                    <input class="form-control" type="tel" size="14" name="_fid_59" id="_fid_59" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Business Email*</label>
+                <label for="_fid_61" class="col-lg-3 col-lg-offset-1 control-label">Business Email*</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_61" required/>
+                    <input class="form-control" type="text" size="40" name="_fid_61" id="_fid_61" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Business Website</label>
+                <label for="_fid_56" class="col-lg-3 col-lg-offset-1 control-label">Business Website</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_56" />
+                    <input class="form-control" type="text" size="40" name="_fid_56" id="_fid_56" />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Date Business Started</label>
+                <label for="_fid_57" class="col-lg-3 col-lg-offset-1 control-label">Date Business Started</label>
                 <div class="col-lg-2 controls input-group">	
-                    <input class="form-control" type="text" id="datepicker1" size="10" name="_fid_57" placeholder="MM/DD/YYYY" />
+                    <input class="form-control" type="text" id="datepicker1" size="10" name="_fid_57" id="_fid_57" placeholder="MM/DD/YYYY" />
                     <span class="input-group-addon glyphicon glyphicon-calendar"></span>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Entity type*</label>
+                <label for="_fid_62" class="col-lg-3 col-lg-offset-1 control-label">Entity type*</label>
                 <div class="col-lg-3">	
-                    <select class="form-control" name="_fid_62" required>
-                        <option selected value>-- Please Select--</option>
-                        <option>S-corp</option>
-                        <option>C-corp</option>
-                        <option>Partnership</option>
-                        <option>LLC</option>
-                        <option>LLP</option>
-                        <option>Sole Proprietorship</option>
-                        <option>Nonprofit</option>
+                    <select class="form-control" name="_fid_62" id="_fid_62" required>
+                        <option value=" " selected></option>
+                        <option value="S-Corp">S-corp</option>
+                        <option value="C-Corp">C-corp</option>
+                        <option value="Partnership">Partnership</option>
+                        <option value="LLC">LLC</option>
+                        <option value="LLP">LLP</option>
+                        <option value="Sole Proprietorship">Sole Proprietorship</option>
+                        <option value="Nonprofit">Nonprofit</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">State of Incorporation*</label>
+                <label for="_fid_198"class="col-lg-3 col-lg-offset-1 control-label">State of Incorporation*</label>
                 <div class="col-lg-3">	
-                    <select class="form-control" name="" required>
-                        <option selected value>-- Please Select--</option>
+                    <select class="form-control" name="_fid_198" id="_fid_198" required>
+                        <option selected></option>
                         <option>Alabama</option>
                         <option>Alaska</option>
                         <option>Arizona</option>
@@ -509,77 +481,73 @@
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Pay Frequency*</label>
+                <label for="_fid_30" class="col-lg-3 col-lg-offset-1 control-label">Pay Frequency*</label>
                 <div class="col-lg-3">	
-                    <select class="form-control" name="_fid_30" >
-                        <option selected value>-- Please Select--</option>
-                        <option>Weekly</option>
-                        <option>Bi-Weekly</option>
-                        <option>Semi-Monthly</option>
-                        <option>Monthly</option>
+                    <select class="form-control" name="_fid_30" id="_fid_30" >
+                        <option value=" " selected></option>
+                        <option value="Weekly">Weekly</option>
+                        <option value="Bi-Weekly">Bi-Weekly</option>
+                        <option value="Semi-Monthly">Semi-Monthly</option>
+                        <option value="Monthly">Monthly</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Total Expected Direct Deposit*</label>
+                <label for="_fid_63" class="col-lg-3 col-lg-offset-1 control-label">Total Expected Direct Deposit*</label>
                 <div class="col-lg-4 controls input-group">
                     <span class="input-group-addon">$</span>
-                    <input class="form-control" type="text" size="40" name="_fid_63" required/>
+                    <input class="form-control" type="text" size="40" name="_fid_63" id="_fid_63" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Current Payroll Provider</label>
+                <label for="_fid_64" class="col-lg-3 col-lg-offset-1 control-label">Current Payroll Provider</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_64" />
+                    <input class="form-control" type="text" size="40" name="_fid_64" id="_fid_64" />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Federal Reporting Information (EIN)*</label>
+                <label for="_fid_7" class="col-lg-3 col-lg-offset-1 control-label">Federal Reporting Information (EIN)*</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="10" name="_fid_7" required/>
+                    <input class="form-control" type="text" size="10" name="_fid_7" id="_fid_7" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Sage Customer ID</label>
+                <label for="_fid_22" class="col-lg-3 col-lg-offset-1 control-label">Sage Customer ID</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_22" />
+                    <input class="form-control" type="text" size="40" name="_fid_22" id="_fid_22" />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Are you a SAN Member?*</label>
-                <div class="col-lg-2">	
-                    <select class="form-control" name="" required>
-                        <option selected value>-- Please Select--</option>
-                        <option>No</option>
-                        <option>Yes</option>
-                    </select>
+                <label for="_fid_169" class="checkbox col-lg-3 col-lg-offset-1 control-label">Are you a SAN Member?</label>
+                <div class="checkbox col-lg-1 controls">	
+                    <p><input type="checkbox" name="_fid_169" id="_fid_169"></p>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">SAN Member ID*</label>
+                <label for="_fid_199" class="col-lg-3 col-lg-offset-1 control-label">SAN Member ID</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_22" required/>
+                    <input class="form-control" type="text" size="40" name="_fid_199" id="_fid_199" />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Expected Start Date</label>
+                <label for="_fid_65" class="col-lg-3 col-lg-offset-1 control-label">Expected Start Date</label>
                 <div class="col-lg-2 controls input-group">	
-                    <input class="form-control" type="text" id="datepicker2" size="10" name="_fid_65" placeholder="MM/DD/YYYY" />
+                    <input class="form-control" type="text" id="datepicker2" size="10" name="_fid_65" id="_fid_65" placeholder="MM/DD/YYYY" />
                     <span class="input-group-addon glyphicon glyphicon-calendar"></span>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Preferred PIN Number</label>
+                <label for="_fid_123" class="col-lg-3 col-lg-offset-1 control-label">Preferred PIN Number</label>
                 <div class="col-lg-1 controls">	
-                    <input class="form-control" type="text" pattern="[0-9]*" inputmode="numeric" size="4" maxlength="4" aria-describedby="pinHelp" name="_fid_123" />
+                    <input class="form-control" type="text" pattern="[0-9]*" inputmode="numeric" size="4" maxlength="4" aria-describedby="pinHelp" name="_fid_123" id="_fid_123" />
                 </div>
                 <span id="pinHelp" class="help-block col-lg-3 text-info">Please choose and remember a 4-digit PIN number for future reference.</span>
             </div>
@@ -607,45 +575,31 @@
                         <div class="panel-body">
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Name*</label>
+                                <label for="_fid_26" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Name</label>
                                 <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_26" required/>
+                                    <input class="form-control" type="text" size="40" name="_fid_26" id="_fid_26"/>
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Address*</label>
+                                <label for="_fid_113" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Address</label>
                                 <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_113" placeholder="Street name" required/>
+                                    <input class="form-control" type="text" size="60" name="_fid_113" id="_fid_113" placeholder="Street Name, Unit/Suite/Room No., Building No., etc."/>
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_114" placeholder="Unit/Suite/Room No., Building No., etc." />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_115" placeholder="Unit/Suite/Room No., Building No., etc." />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">City*</label>
+                                <label for="_fid_116" class="col-lg-3 col-lg-offset-1 control-label">City</label>
                                 <div class="col-lg-3 controls">	
-                                    <input class="form-control" type=text size=60 name="_fid_116" required/>
+                                    <input class="form-control" type=text size=60 name="_fid_116" id="_fid_116"/>
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">State / Region*</label>
+                                <label for="_fid_117" class="col-lg-3 col-lg-offset-1 control-label">State / Region</label>
                                 <div class="col-lg-3">	
-                                    <select class="form-control" name="_fid_117" required>
-                                        <option selected value>-- Please Select--</option>
+                                    <select class="form-control" name="_fid_117" id="_fid_117">
+                                        <option selected></option>
                                         <option>Alabama</option>
                                         <option>Alaska</option>
                                         <option>Arizona</option>
@@ -702,44 +656,44 @@
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Zip Code*</label>
+                                <label for="_fid_118" class="col-lg-3 col-lg-offset-1 control-label">Zip Code</label>
                                 <div class="col-lg-2 controls">	
-                                    <input class="form-control" type="text" size="10" name="_fid_118" required/>
+                                    <input class="form-control" type="text" size="10" name="_fid_118" id="_fid_118"/>
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Phone*</label>
+                                <label for="_fid_27" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Phone</label>
                                 <div class="col-lg-3 controls">	
-                                    <input class="form-control" type="tel" size="14" name="_fid_27" />
+                                    <input class="form-control" type="tel" size="14" name="_fid_27" id="_fid_27" />
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact E-mail Address*</label>
+                                <label for="_fid_28" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact E-mail Address</label>
                                 <div class="col-lg-3 controls">	
-                                    <input class="form-control" type="email" size="40" name="_fid_28" required/>
+                                    <input class="form-control" type="email" size="40" name="_fid_28" id="_fid_28"/>
                                 </div>
                             </div>
 
                             <div class="form-group hidden">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Payroll contact is primary</label>
+                                <label for="_fid_83" class="checkbox col-lg-3 col-lg-offset-1 control-label">Payroll contact is primary</label>
+                                <div class="checkbox col-lg-1 controls">	
+                                    <p><input type="checkbox" value="yes"name="_fid_83" id="_fid_83" /></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group hidden">	
+                                <label for="_fid_84" class="col-lg-3 col-lg-offset-1 control-label">Do you have any other accounts using Sage 50?</label>
                                 <div class="col-lg-1 controls">	
-                                    <input class="form-control" type="checkbox" name="_fid_83" />
+                                    <input class="form-control" type="text" size="40" name="_fid_84" id="_fid_84" />
                                 </div>
                             </div>
 
                             <div class="form-group hidden">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Do you have any other accounts using Sage 50?</label>
-                                <div class="col-lg-1 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_84" />
-                                </div>
-                            </div>
-
-                            <div class="form-group hidden">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Attach an Debit Authorization form with this agreement</label>
+                                <label for="_fid_200" class="col-lg-3 col-lg-offset-1 control-label">Please Attach a Debit Authorization Form with this Agreement:</label>
                                 <div class="col-lg-5 controls">	
-                                    <input class="form-control" name="Debit-Authorization" type="file">
+                                    <input class="form-control" name="_fid_200" id="_fid_200" type="file">
                                 </div>
                             </div>
 
@@ -760,45 +714,31 @@
             <h2>Bank Information - Payroll Funding / Billing / Client Account</h2>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Name of Funding Bank*</label>
+                <label for="_fid_66" class="col-lg-3 col-lg-offset-1 control-label">Name of Funding Bank*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_66" required/>
+                    <input class="form-control" type="text" size="40" name="_fid_66" id="_fid_66" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Funding Bank Address*</label>
+                <label for="_fid_99" class="col-lg-3 col-lg-offset-1 control-label">Funding Bank Address*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_99" required placeholder="Street name" />
+                    <input class="form-control" type="text" size="60" name="_fid_99" id="_fid_99" required placeholder="Street Name, Unit/Suite/Room No., Building No., etc." />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
-                <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_100" placeholder="Unit/Suite/Room No., Building No., etc." />
-                </div>
-            </div>
-
-            <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
-                <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_101" placeholder="Unit/Suite/Room No., Building No., etc." />
-                </div>
-            </div>
-
-            <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">City*</label>
+                <label for="_fid_102" class="col-lg-3 col-lg-offset-1 control-label">City*</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_102" required/>
+                    <input class="form-control" type="text" size="60" name="_fid_102" id="_fid_102"required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">State / Region*</label>
+                <label for="_fid_103" class="col-lg-3 col-lg-offset-1 control-label">State / Region*</label>
                 <div class="col-lg-3">	
-                    <select class="form-control" name="_fid_103" required>
-                        <option selected value>-- Please Select--</option>
+                    <select class="form-control" name="_fid_103" id="_fid_103" required>
+                        <option selected></option>
                         <option>Alabama</option>
                         <option>Alaska</option>
                         <option>Arizona</option>
@@ -855,56 +795,56 @@
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Zip Code*</label>
+                <label for="_fid_104" class="col-lg-3 col-lg-offset-1 control-label">Zip Code*</label>
                 <div class="col-lg-2 controls">	
-                    <input class="form-control" type="text" size="10" name="_fid_104" required/>
+                    <input class="form-control" type="text" size="10" name="_fid_104" id="_fid_104" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Funding Bank Contact Name*</label>
+                <label for="_fid_68" class="col-lg-3 col-lg-offset-1 control-label">Funding Bank Contact Name*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_68" required/>
+                    <input class="form-control" type="text" size="40" name="_fid_68" id="_fid_68" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Funding Bank Contact Phone*</label>
+                <label for="_fid_69" class="col-lg-3 col-lg-offset-1 control-label">Funding Bank Contact Phone*</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="tel" size="14" name="_fid_69" required/>
+                    <input class="form-control" type="tel" size="14" name="_fid_69" id="_fid_69" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Routing Number</label>
+                <label for="_fid_70" class="col-lg-3 col-lg-offset-1 control-label">Routing Number</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_70" />
+                    <input class="form-control" type="text" size="40" name="_fid_70" id="_fid_70" />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Funding Account Number*</label>
+                <label for="_fid_71" class="col-lg-3 col-lg-offset-1 control-label">Funding Account Number*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_71" required/>
+                    <input class="form-control" type="text" size="40" name="_fid_71" id="_fid_71" required/>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Funding Account Type*</label>
+                <label for="_fid_72" class="col-lg-3 col-lg-offset-1 control-label">Funding Account Type*</label>
                 <div class="col-lg-4 controls">	
-                    <select class="form-control" name="_fid_72" required/>
-                        <option selected value>--Please select--</option>
-                        <option>Checking</option>
-                        <option>Savings</option>
-                        <option>Money Market</option>
+                    <select class="form-control" name="_fid_72" id="_fid_72" required/>
+                        <option value=" " selected></option>
+                        <option value="Checking">Checking</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Money Market">Money Market</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Please Attach a Voided Check for this Account*</label>
+                <label for="_fid_201" class="col-lg-3 col-lg-offset-1 control-label">Please Attach a Voided Check for this Account*</label>
                 <div class="col-lg-5">	
-                    <input class="form-control" type="file" name="" required/>
+                    <input class="form-control" type="file" name="_fid_201" id="_fid_201" required/>
                 </div>
             </div>
 				
@@ -931,45 +871,31 @@
                         <div class="panel-body">
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Name of Billing Bank*</label>
+                                <label for="_fid_73" class="col-lg-3 col-lg-offset-1 control-label">Name of Billing Bank</label>
                                 <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_73" required/>
+                                    <input class="form-control" type="text" size="40" name="_fid_73" id="_fid_73" />
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Address*</label>
+                                <label for="_fid_106" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Address</label>
                                 <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_106" required placeholder="Street name" />
+                                    <input class="form-control" type="text" size="60" name="_fid_106" id="_fid_106" placeholder="Street Name, Unit/Suite/Room No., Building No., etc." />
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Street 1</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_107" placeholder="Unit/Suite/Room No., Building No., etc." />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Street 2</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_108" placeholder="Unit/Suite/Room No., Building No., etc." />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">City*</label>
+                                <label for="_fid_109" class="col-lg-3 col-lg-offset-1 control-label">City</label>
                                 <div class="col-lg-3 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_109" required/>
+                                    <input class="form-control" type="text" size="60" name="_fid_109" id="_fid_109" />
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">State / Region*</label>
-                                <div class="col-lg-3">	
-                                    <select class="form-control" name="_fid_110" required>
-                                        <option selected value>-- Please Select--</option>
+                                <label for="_fid_110" class="col-lg-3 col-lg-offset-1 control-label">State / Region</label>
+                                <div class="col-lg-3">
+                                    <select class="form-control" name="_fid_110" id="_fid_110" >
+                                        <option selected></option>
                                         <option>Alabama</option>
                                         <option>Alaska</option>
                                         <option>Arizona</option>
@@ -1026,56 +952,56 @@
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Zip Code*</label>
+                                <label for="_fid_111" class="col-lg-3 col-lg-offset-1 control-label">Zip Code</label>
                                 <div class="col-lg-2 controls">	
-                                    <input class="form-control" type="text" size="10" name="_fid_111" required/>
+                                    <input class="form-control" type="text" size="10" name="_fid_111" id="_fid_111" />
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Contact Name*</label>
+                                <label for="_fid_75" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Contact Name</label>
                                 <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_75" required/>
+                                    <input class="form-control" type="text" size="40" name="_fid_75" id="_fid_75" />
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Contact Phone*</label>
+                                <label for="_fid_76" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Contact Phone</label>
                                 <div class="col-lg-3 controls">	
-                                    <input class="form-control" type="tel" size="14" name="_fid_76" required/>
+                                    <input class="form-control" type="tel" size="14" name="_fid_76" id="_fid_76" />
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Routing Number</label>
+                                <label for="_fid_77" class="col-lg-3 col-lg-offset-1 control-label">Routing Number</label>
                                 <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_77" />
+                                    <input class="form-control" type="text" size="40" name="_fid_77" id="_fid_77" />
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Billing Account Number*</label>
+                                <label for="_fid_78" class="col-lg-3 col-lg-offset-1 control-label">Billing Account Number</label>
                                 <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_78" required/>
+                                    <input class="form-control" type="text" size="40" name="_fid_78" id="_fid_78" />
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Billing Account Type*</label>
+                                <label for="_fid_79" class="col-lg-3 col-lg-offset-1 control-label">Billing Account Type</label>
                                 <div class="col-lg-4 controls">	
-                                    <select class="form-control" name="_fid_79" required/>
-                                        <option selected value>--Please select--</option>
-                                        <option>Checking</option>
-                                        <option>Savings</option>
-                                        <option>Money Market</option>
+                                    <select class="form-control" name="_fid_79" id="_fid_79" />
+                                        <option value=" " selected></option>
+                                        <option value="Checking">Checking</option>
+                                        <option value="Savings">Savings</option>
+                                        <option value="Money Market">Money Market</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="form-group">	
-                                <label class="col-lg-3 col-lg-offset-1 control-label">Please Attach a Voided Check for this Account:</label>
+                                <label for="_fid_202" class="col-lg-3 col-lg-offset-1 control-label">Please Attach a Voided Check for this Account:</label>
                                 <div class="col-lg-5 controls">	
-                                    <input class="form-control" type="file" name="" />
+                                    <input class="form-control" type="file" name="_fid_202" id="_fid_202"/>
                                 </div>
                             </div>
 
@@ -1096,55 +1022,49 @@
             <h2>Internal Use Only</h2>
 			
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Sales Representative Name</label>
+                <label for="_fid_19" class="col-lg-3 col-lg-offset-1 control-label">Sales Representative Name</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_19" />
+                    <input class="form-control" type="text" size="40" name="_fid_19" id="_fid_19" />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Sales Representative Email Address</label>
+                <label for="_fid_122" class="col-lg-3 col-lg-offset-1 control-label">Sales Representative Email Address</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_122" />
+                    <input class="form-control" type="text" size="40" name="_fid_122" id="_fid_122" />
                 </div>
             </div>
 
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Referring Business Partner ID (BPID)</label>
+                <label for="_fid_35" class="col-lg-3 col-lg-offset-1 control-label">Referring Business Partner ID (BPID)</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="40" name="_fid_35" />
+                    <input class="form-control" type="text" size="40" name="_fid_35" id="_fid_35" />
                 </div>
             </div>
             
             <div class="form-group">	
-                <label class="col-lg-3 col-lg-offset-1 control-label">Send to G/L</label>
-                <div class="col-lg-2">	
-                    <select class="form-control" name=_fid_34 >
-                        <option selected value>-- Please Select--</option>
-                        <option>No</option>
-                        <option>Yes</option>
-                    </select>
+                <label for="_fid_34" class="checkbox col-lg-3 col-lg-offset-1 control-label">Send to G/L</label>
+                <div class="checkbox col-lg-1 controls">	
+                    <p><input type="checkbox" value="yes" name="_fid_34" id="_fid_34" ></p>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="checkbox col-lg-3 col-lg-offset-1 control-label">Check All That Apply:</label>
 
-                    <div class="checkbox col-lg-8 controls">
-                        <p><input type="checkbox" value="yes" name="_fid_93" /> Most EE 1099</p>
+                <div class="checkbox col-lg-3 controls">
+                    <p><input type="checkbox" value="yes" name="_fid_93" id="_fid_93" /> Most EE 1099</p>
 
-                        <p><input type="checkbox" value="yes" name="_fid_94" /> Client Awareness of Payroll</p>
+                    <p><input type="checkbox" value="yes" name="_fid_94" id="_fid_94" /> Client Awareness of Payroll</p>
 
-                        <p><input type="checkbox" value="yes" name="_fid_95" /> Eager to Process</p>
+                    <p><input type="checkbox" value="yes" name="_fid_95" id="_fid_95" /> Eager to Process</p>
 
-                        <p><input type="checkbox" value="yes" name="_fid_96" /> Email a Free Provider</p>
+                    <p><input type="checkbox" value="yes" name="_fid_96" id="_fid_96" /> Email a Free Provider</p>
 
-                        <p><input type="checkbox" value="yes" name="_fid_97" /> Remote Unverified Source</p>
+                    <p><input type="checkbox" value="yes" name="_fid_97" id="_fid_97" /> Remote Unverified Source</p>
 
-                        <p><input type="checkbox" value="yes" name="_fid_98" /> ACH Processing Limits</p>
-                    </div>
-
-                </label>
+                    <p><input type="checkbox" value="yes" name="_fid_98" id="_fid_98" /> ACH Processing Limits</p>
+                </div>
             </div>
 					
 		</div>		
@@ -1154,7 +1074,7 @@
 	
 	<div class="alert alert-warning">
 	    <label>
-            <input type="checkbox" name="" required/> I accept the <a href="#" data-toggle="modal" data-target="#agreement">Universal Terms &amp; Conditions</a>.
+            <input type="checkbox" value="yes" name="" required/> I accept the <a href="#" data-toggle="modal" data-target="#agreement">Universal Terms &amp; Conditions</a>.
         </label>
 	</div>
 	
@@ -1219,14 +1139,10 @@
 </div><!-- /.modal -->
 
 <script type="text/javascript" src="js/date-picker.js"></script>
-<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/form-validation.js"></script>
 <script type="text/javascript" src="js/check-for-other.js"></script>
 
-<script lang=javascript>
-		function validateForm(theForm)
-		{
-			}
+<script>
+    $("#qdbform").validate();
 </script>
 
 <script src="modernizr.js"></script>
