@@ -1,0 +1,11 @@
+@media print {
+    
+    #header, ul.links, #back-top, .btn-green, .btn-gray, img {
+        display: none !important;
+    }
+    
+    #agreement, .modal-body {
+        display: block !important;
+    }
+
+}

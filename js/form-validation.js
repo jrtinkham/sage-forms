@@ -21,18 +21,17 @@ $().ready(function () {
                 maxlength: 11
             },
             
-            //Business Owner Address*
+            //Business Owner Address Full Google Look-up
             _fid_86:  {
-                required: true
 
             },
             
-            // Street 1
+            // Business Owner Address 1*
             _fid_87: {
-                
+                required: true
             },
             
-            // Street 2
+            // Address 2
             _fid_88: {
                 
             },
@@ -70,18 +69,17 @@ $().ready(function () {
 
             },
             
-            // Business Address*
+            // Business Address Full Google Look up*
             _fid_44:  {
-                required: true
 
             },
             
-            // Street 1
+            // Business Address 1*
             _fid_45: {
-            
+                required: true
             },
             
-            // Street 2
+            // Address 2
             _fid_46: {
             
             },
@@ -107,7 +105,6 @@ $().ready(function () {
             },
             
             // Business Contact Name
-        
             _fid_60: {
             
             },
@@ -197,9 +194,8 @@ $().ready(function () {
 
             },
         
-            // SAN Member ID*
+            // SAN Member ID
             _fid_22:  {
-                required: true
 
             },
         
@@ -223,18 +219,18 @@ $().ready(function () {
 
             },
             
-            // Payroll Contact Address*
+            // Payroll Contact Address Full Google Look Up
             _fid_113:  {
-                required: true
+                
 
             },
             
-            // Street 1
+            // Payroll Contact Address 1*
             _fid_114: {
-                
+                required: true
             },
         
-            // Street 2
+            // Address 2
             _fid_115: {
                 
             },
@@ -261,7 +257,8 @@ $().ready(function () {
             
             // Payroll Contact Phone*
             _fid_27:  {
-                required: true
+                required: true,
+                tel: true
 
             },
         

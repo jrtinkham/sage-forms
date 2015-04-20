@@ -31,11 +31,11 @@
 		color: #3EA7DD;
 	}
 
-	a, input[type=submit] {
+	a, h4, input[type=submit] {
 		text-decoration: none;
 	}
 	
-	a:hover, button:hover, .btn-green:hover, .btn-gray:hover {
+	a:hover, .btn:hover, button:hover, .btn-green:hover, .btn-gray:hover {
 		text-decoration: underline;
 	}
 
@@ -167,7 +167,6 @@
 // ===================
 
 
-
 // ===================
 // Theme
 // ===================
@@ -223,3 +222,15 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) { ... }
+
+@media print {
+    
+    #header, ul.links, #back-top, .btn-green, .btn-gray, img {
+        display: none !important;
+    }
+    
+    #agreement, .modal-body > p, .modal {
+        display: block !important;
+    }
+
+}
