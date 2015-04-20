@@ -22,6 +22,9 @@
 <!-- Sage Payroll CSS file -->
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" media="print" href="print.css">
+
 <!-- jQuery v1.9.1 or higher -->
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -42,32 +45,20 @@
 
 <!-- Auto Fill JS file -->
 <script type="text/javascript" src="js/autofill.js"></script>
+<script type="text/javascript" src="js/date-picker.js"></script>
+<script type="text/javascript" src="js/form-validation.js"></script>
+
 <script>
-    
-    $('.collapse').collapse();
-    $('#payroll-cpa-contact-details div h2 p label input[type=checkbox]').on('click', function(e){
-        e.stopPropagation();
-        $(this).parent().trigger('click');   // <---  HERE
-    })
-    $('#collapseOne').on('show.bs.collapse', function(e){
-        if( ! $('#payroll-cpa-contact-details div h2 p label input[type=checkbox]').is(':checked') )
-        {
-            return false;
-        }
-    });
-    
+    $("#qdbform").validate();
 </script>
 
-<script>Modernizr.load({
-  test: Modernizr.inputtypes.date,
-  nope: ['http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js', 'jquery-ui.css'],
-  complete: function () {
-    $('input[type=date]').datepicker({
-      dateFormat: 'yy-mm-dd'
-    }); 
-  }
-});
+<script>
+    $(document).ready(function() {
+        $('#collapse1').collapse({'toggle': false});
+        $('#collapse2').collapse({'toggle': false});
+    });
 </script>
+
 
 </head>
 
@@ -126,7 +117,7 @@
 	
 	<p>Please fill out the form below to apply for the Sage 50 Direct Deposit service. All fields noted with an asterisk (*) are required.</p>
 	
-	<ul>
+	<ul class="links">
 	    <li><a href="#business-owner-information">Business Owner Information</a></li>
 	    <li><a href="#business-information">Business Information</a></li>
 	    <li><a href="#payroll-cpa-contact-details">Payroll / CPA Contact Details</a></li>
@@ -160,12 +151,28 @@
                 </div>
             </div>
 
-            <div class="form-group">	
+            <!--Start Hide
+            <div class="form-group hidden">	
                 <label for="_fid_86" class="col-lg-3 col-lg-offset-1 control-label">Business Owner Address*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_86" id="_fid_86" placeholder="Street Name, Unit/Suite/Room No., Building No., etc." required/>
+                    <input class="form-control" type="text" size="60" name="_fid_86" id="_fid_86" placeholder="Street, City, State, Zip, etc."/>
                 </div>
             </div>
+            End Hide-->
+            
+            <div class="form-group">	
+                <label for="_fid_87" class="col-lg-3 col-lg-offset-1 control-label">Business Owner Address 1*</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="11" name="_fid_87" id="_fid_87" placeholder="Street Name" required/>
+                 </div>
+             </div>
+ 
+             <div class="form-group">	
+                <label for="_fid_88" class="col-lg-3 col-lg-offset-1 control-label">Address 2</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="60" name="_fid_88" placeholder="Unit/Suite/Room No., Building No., etc." />
+                 </div>
+             </div>
 
             <div class="form-group">	
                 <label for="_fid_89" class="col-lg-3 col-lg-offset-1 control-label">City*</label>
@@ -266,12 +273,28 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <!-- Start Hide
+            <div class="form-group hidden">
                 <label for="_fid_44" class="col-lg-3 col-lg-offset-1 control-label">Business Address*</label>
                 <div class="col-lg-4 controls">
-                    <input class="form-control" type="text" size="60" name="_fid_44" id="_fid_44" placeholder="Street Name, Unit/Suite/Room No., Building No., etc." required/>
+                    <input class="form-control" type="text" size="60" name="_fid_44" id="_fid_44" placeholder="Street, City, State, Zip, etc."/>
                 </div>
             </div>
+            End Hide-->
+            
+            <div class="form-group">	
+                <label for="_fid_45" class="col-lg-3 col-lg-offset-1 control-label">Business Address 1*</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="11" name="_fid_45" id="_fid_45" placeholder="Street Name" required/>
+                 </div>
+             </div>
+ 
+             <div class="form-group">	
+                <label for="_fid_46" class="col-lg-3 col-lg-offset-1 control-label">Address 2</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="60" name="_fid_46" id="_fid_46" placeholder="Unit/Suite/Room No., Building No., etc." />
+                 </div>
+             </div>
 
             <div class="form-group">
                 <label for="_fid_47" class="col-lg-3 col-lg-offset-1 control-label">City*</label>
@@ -398,9 +421,9 @@
 
             <div class="form-group">	
                 <label for="_fid_57" class="col-lg-3 col-lg-offset-1 control-label">Date Business Started</label>
-                <div class="col-lg-2 controls input-group">	
+                <div class="col-lg-3 controls input-group">	
                     <input class="form-control" type="text" id="datepicker1" size="10" name="_fid_57" id="_fid_57" placeholder="MM/DD/YYYY" />
-                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                    <label for="datepicker1" class="input-group-addon btn"><i class="glyphicon glyphicon-calendar"></i></label>
                 </div>
             </div>
 
@@ -538,9 +561,9 @@
 
             <div class="form-group">	
                 <label for="_fid_65" class="col-lg-3 col-lg-offset-1 control-label">Expected Start Date</label>
-                <div class="col-lg-2 controls input-group">	
+                <div class="col-lg-3 controls input-group">	
                     <input class="form-control" type="text" id="datepicker2" size="10" name="_fid_65" id="_fid_65" placeholder="MM/DD/YYYY" />
-                    <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                    <label for="datepicker2" class="input-group-addon btn"><i class="glyphicon glyphicon-calendar"></i></label>
                 </div>
             </div>
 
@@ -563,142 +586,153 @@
 				
             <h2>Payroll / CPA Contact Details</h2>
             
-            <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Use the same contact details as entered in the Business Information section above.</a>
-                        </h4>
-                    </div>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+              Click here to use the same contact details as entered in the Business Information section above.
+            </button>
+            
+            <div class="collapse in" id="collapse1">
+                <div class="well">
 
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-
-                            <div class="form-group">	
-                                <label for="_fid_26" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Name</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_26" id="_fid_26"/>
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_113" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Address</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_113" id="_fid_113" placeholder="Street Name, Unit/Suite/Room No., Building No., etc."/>
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_116" class="col-lg-3 col-lg-offset-1 control-label">City</label>
-                                <div class="col-lg-3 controls">	
-                                    <input class="form-control" type=text size=60 name="_fid_116" id="_fid_116"/>
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_117" class="col-lg-3 col-lg-offset-1 control-label">State / Region</label>
-                                <div class="col-lg-3">	
-                                    <select class="form-control" name="_fid_117" id="_fid_117">
-                                        <option selected></option>
-                                        <option>Alabama</option>
-                                        <option>Alaska</option>
-                                        <option>Arizona</option>
-                                        <option>Arkansas</option>
-                                        <option>California</option>
-                                        <option>Colorado</option>
-                                        <option>Connecticut</option>
-                                        <option>Delaware</option>
-                                        <option>District of Columbia</option>
-                                        <option>Florida</option>
-                                        <option>Georgia</option>
-                                        <option>Hawaii</option>
-                                        <option>Idaho</option>
-                                        <option>Illinois</option>
-                                        <option>Indiana</option>
-                                        <option>Iowa</option>
-                                        <option>Kansas</option>
-                                        <option>Kentucky</option>
-                                        <option>Louisiana</option>
-                                        <option>Maine</option>
-                                        <option>Maryland</option>
-                                        <option>Massachusetts</option>
-                                        <option>Michigan</option>
-                                        <option>Minnesota</option>
-                                        <option>Mississippi</option>
-                                        <option>Missouri</option>
-                                        <option>Montana</option>
-                                        <option>Nebraska</option>
-                                        <option>Nevada</option>
-                                        <option>New Hampshire</option>
-                                        <option>New Jersey</option>
-                                        <option>New Mexico</option>
-                                        <option>New York</option>
-                                        <option>North Carolina</option>
-                                        <option>North Dakota</option>
-                                        <option>Ohio</option>
-                                        <option>Oklahoma</option>
-                                        <option>Oregon</option>
-                                        <option>Pennsylvania</option>
-                                        <option>Rhode Island</option>
-                                        <option>South Carolina</option>
-                                        <option>South Dakota</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Utah</option>
-                                        <option>Vermont</option>
-                                        <option>Virginia</option>
-                                        <option>Washington</option>
-                                        <option>West Virginia</option>
-                                        <option>Wisconsin</option>
-                                        <option>Wyoming</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_118" class="col-lg-3 col-lg-offset-1 control-label">Zip Code</label>
-                                <div class="col-lg-2 controls">	
-                                    <input class="form-control" type="text" size="10" name="_fid_118" id="_fid_118"/>
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_27" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Phone</label>
-                                <div class="col-lg-3 controls">	
-                                    <input class="form-control" type="tel" size="14" name="_fid_27" id="_fid_27" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_28" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact E-mail Address</label>
-                                <div class="col-lg-3 controls">	
-                                    <input class="form-control" type="email" size="40" name="_fid_28" id="_fid_28"/>
-                                </div>
-                            </div>
-
-                            <div class="form-group hidden">	
-                                <label for="_fid_83" class="checkbox col-lg-3 col-lg-offset-1 control-label">Payroll contact is primary</label>
-                                <div class="checkbox col-lg-1 controls">	
-                                    <p><input type="checkbox" value="yes"name="_fid_83" id="_fid_83" /></p>
-                                </div>
-                            </div>
-
-                            <div class="form-group hidden">	
-                                <label for="_fid_84" class="col-lg-3 col-lg-offset-1 control-label">Do you have any other accounts using Sage 50?</label>
-                                <div class="col-lg-1 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_84" id="_fid_84" />
-                                </div>
-                            </div>
-
-                            <div class="form-group hidden">	
-                                <label for="_fid_200" class="col-lg-3 col-lg-offset-1 control-label">Please Attach a Debit Authorization Form with this Agreement:</label>
-                                <div class="col-lg-5 controls">	
-                                    <input class="form-control" name="_fid_200" id="_fid_200" type="file">
-                                </div>
-                            </div>
-
+                    <div class="form-group">	
+                        <label for="_fid_26" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Name</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="40" name="_fid_26" id="_fid_26"/>
                         </div>
                     </div>
+
+                   <!-- Start Hide
+                    <div class="form-group hidden">	
+                        <label for="_fid_113" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Address</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="60" name="_fid_113" id="_fid_113" placeholder="Street Name, City, State, Zip"/>
+                        </div>
+                    </div>
+                    End Hide -->
+
+                    <div class="form-group">	
+                        <label for="_fid_114" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Address 1</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="11" name="_fid_114" id="_fid_114" placeholder="Street Name"/>
+                         </div>
+                     </div>
+
+                     <div class="form-group">	
+                        <label for="_fid_115" class="col-lg-3 col-lg-offset-1 control-label">Address 2</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="60" name="_fid_115" id="_fid_115" placeholder="Unit/Suite/Room No., Building No., etc." />
+                         </div>
+                     </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_116" class="col-lg-3 col-lg-offset-1 control-label">City</label>
+                        <div class="col-lg-3 controls">	
+                            <input class="form-control" type=text size=60 name="_fid_116" id="_fid_116"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_117" class="col-lg-3 col-lg-offset-1 control-label">State / Region</label>
+                        <div class="col-lg-3">	
+                            <select class="form-control" name="_fid_117" id="_fid_117">
+                                <option selected></option>
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option>Arizona</option>
+                                <option>Arkansas</option>
+                                <option>California</option>
+                                <option>Colorado</option>
+                                <option>Connecticut</option>
+                                <option>Delaware</option>
+                                <option>District of Columbia</option>
+                                <option>Florida</option>
+                                <option>Georgia</option>
+                                <option>Hawaii</option>
+                                <option>Idaho</option>
+                                <option>Illinois</option>
+                                <option>Indiana</option>
+                                <option>Iowa</option>
+                                <option>Kansas</option>
+                                <option>Kentucky</option>
+                                <option>Louisiana</option>
+                                <option>Maine</option>
+                                <option>Maryland</option>
+                                <option>Massachusetts</option>
+                                <option>Michigan</option>
+                                <option>Minnesota</option>
+                                <option>Mississippi</option>
+                                <option>Missouri</option>
+                                <option>Montana</option>
+                                <option>Nebraska</option>
+                                <option>Nevada</option>
+                                <option>New Hampshire</option>
+                                <option>New Jersey</option>
+                                <option>New Mexico</option>
+                                <option>New York</option>
+                                <option>North Carolina</option>
+                                <option>North Dakota</option>
+                                <option>Ohio</option>
+                                <option>Oklahoma</option>
+                                <option>Oregon</option>
+                                <option>Pennsylvania</option>
+                                <option>Rhode Island</option>
+                                <option>South Carolina</option>
+                                <option>South Dakota</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Utah</option>
+                                <option>Vermont</option>
+                                <option>Virginia</option>
+                                <option>Washington</option>
+                                <option>West Virginia</option>
+                                <option>Wisconsin</option>
+                                <option>Wyoming</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_118" class="col-lg-3 col-lg-offset-1 control-label">Zip Code</label>
+                        <div class="col-lg-2 controls">	
+                            <input class="form-control" type="text" size="10" name="_fid_118" id="_fid_118"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_27" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact Phone</label>
+                        <div class="col-lg-3 controls">	
+                            <input class="form-control" type="tel" size="14" name="_fid_27" id="_fid_27" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_28" class="col-lg-3 col-lg-offset-1 control-label">Payroll Contact E-mail Address</label>
+                        <div class="col-lg-3 controls">	
+                            <input class="form-control" type="email" size="40" name="_fid_28" id="_fid_28"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group hidden">	
+                        <label for="_fid_83" class="checkbox col-lg-3 col-lg-offset-1 control-label">Payroll contact is primary</label>
+                        <div class="checkbox col-lg-1 controls">	
+                            <p><input type="checkbox" value="yes"name="_fid_83" id="_fid_83" /></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group hidden">	
+                        <label for="_fid_84" class="col-lg-3 col-lg-offset-1 control-label">Do you have any other accounts using Sage 50?</label>
+                        <div class="col-lg-1 controls">	
+                            <input class="form-control" type="text" size="40" name="_fid_84" id="_fid_84" />
+                        </div>
+                    </div>
+
+                    <div class="form-group hidden">	
+                        <label for="_fid_200" class="col-lg-3 col-lg-offset-1 control-label">Please Attach a Debit Authorization Form with this Agreement:</label>
+                        <div class="col-lg-5 controls">	
+                            <input class="form-control" name="_fid_200" id="_fid_200" type="file">
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             
@@ -720,17 +754,33 @@
                 </div>
             </div>
 
-            <div class="form-group">	
+           <!-- Start Hide
+            <div class="form-group hidden">	
                 <label for="_fid_99" class="col-lg-3 col-lg-offset-1 control-label">Funding Bank Address*</label>
                 <div class="col-lg-4 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_99" id="_fid_99" required placeholder="Street Name, Unit/Suite/Room No., Building No., etc." />
+                    <input class="form-control" type="text" size="60" name="_fid_99" id="_fid_99" placeholder="Street Name, City State, Zip" />
                 </div>
             </div>
+            End Hide-->
+            
+            <div class="form-group">	
+                <label for="_fid_100" class="col-lg-3 col-lg-offset-1 control-label">Funding Bank Address 1</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="11" name="_fid_100" id="_fid_100" placeholder="Street Name" required/>
+                 </div>
+             </div>
 
+            <div class="form-group">	
+                <label for="_fid_101" class="col-lg-3 col-lg-offset-1 control-label">Address 2</label>
+                <div class="col-lg-4 controls">	
+                    <input class="form-control" type="text" size="60" name="_fid_101" id="_fid_101" placeholder="Unit/Suite/Room No., Building No., etc." />
+                 </div>
+            </div>
+                             
             <div class="form-group">	
                 <label for="_fid_102" class="col-lg-3 col-lg-offset-1 control-label">City*</label>
                 <div class="col-lg-3 controls">	
-                    <input class="form-control" type="text" size="60" name="_fid_102" id="_fid_102"required/>
+                    <input class="form-control" type="text" size="60" name="_fid_102" id="_fid_102" required/>
                 </div>
             </div>
 
@@ -859,157 +909,167 @@
 				
             <h2>Bank Information - Billing Only</h2>
             
-            <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Use the same contact details as entered in the Funding Bank section above.</a>
-                        </h4>
-                    </div>
 
-                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+              Click here to use the same contact details as entered in the Funding Bank section above.
+            </button>
+            
+            <div class="collapse in" id="collapse2">
+                <div class="well">
 
-                            <div class="form-group">	
-                                <label for="_fid_73" class="col-lg-3 col-lg-offset-1 control-label">Name of Billing Bank</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_73" id="_fid_73" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_106" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Address</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_106" id="_fid_106" placeholder="Street Name, Unit/Suite/Room No., Building No., etc." />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_109" class="col-lg-3 col-lg-offset-1 control-label">City</label>
-                                <div class="col-lg-3 controls">	
-                                    <input class="form-control" type="text" size="60" name="_fid_109" id="_fid_109" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_110" class="col-lg-3 col-lg-offset-1 control-label">State / Region</label>
-                                <div class="col-lg-3">
-                                    <select class="form-control" name="_fid_110" id="_fid_110" >
-                                        <option selected></option>
-                                        <option>Alabama</option>
-                                        <option>Alaska</option>
-                                        <option>Arizona</option>
-                                        <option>Arkansas</option>
-                                        <option>California</option>
-                                        <option>Colorado</option>
-                                        <option>Connecticut</option>
-                                        <option>Delaware</option>
-                                        <option>District of Columbia</option>
-                                        <option>Florida</option>
-                                        <option>Georgia</option>
-                                        <option>Hawaii</option>
-                                        <option>Idaho</option>
-                                        <option>Illinois</option>
-                                        <option>Indiana</option>
-                                        <option>Iowa</option>
-                                        <option>Kansas</option>
-                                        <option>Kentucky</option>
-                                        <option>Louisiana</option>
-                                        <option>Maine</option>
-                                        <option>Maryland</option>
-                                        <option>Massachusetts</option>
-                                        <option>Michigan</option>
-                                        <option>Minnesota</option>
-                                        <option>Mississippi</option>
-                                        <option>Missouri</option>
-                                        <option>Montana</option>
-                                        <option>Nebraska</option>
-                                        <option>Nevada</option>
-                                        <option>New Hampshire</option>
-                                        <option>New Jersey</option>
-                                        <option>New Mexico</option>
-                                        <option>New York</option>
-                                        <option>North Carolina</option>
-                                        <option>North Dakota</option>
-                                        <option>Ohio</option>
-                                        <option>Oklahoma</option>
-                                        <option>Oregon</option>
-                                        <option>Pennsylvania</option>
-                                        <option>Rhode Island</option>
-                                        <option>South Carolina</option>
-                                        <option>South Dakota</option>
-                                        <option>Tennessee</option>
-                                        <option>Texas</option>
-                                        <option>Utah</option>
-                                        <option>Vermont</option>
-                                        <option>Virginia</option>
-                                        <option>Washington</option>
-                                        <option>West Virginia</option>
-                                        <option>Wisconsin</option>
-                                        <option>Wyoming</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_111" class="col-lg-3 col-lg-offset-1 control-label">Zip Code</label>
-                                <div class="col-lg-2 controls">	
-                                    <input class="form-control" type="text" size="10" name="_fid_111" id="_fid_111" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_75" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Contact Name</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_75" id="_fid_75" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_76" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Contact Phone</label>
-                                <div class="col-lg-3 controls">	
-                                    <input class="form-control" type="tel" size="14" name="_fid_76" id="_fid_76" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_77" class="col-lg-3 col-lg-offset-1 control-label">Routing Number</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_77" id="_fid_77" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_78" class="col-lg-3 col-lg-offset-1 control-label">Billing Account Number</label>
-                                <div class="col-lg-4 controls">	
-                                    <input class="form-control" type="text" size="40" name="_fid_78" id="_fid_78" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_79" class="col-lg-3 col-lg-offset-1 control-label">Billing Account Type</label>
-                                <div class="col-lg-4 controls">	
-                                    <select class="form-control" name="_fid_79" id="_fid_79" />
-                                        <option value=" " selected></option>
-                                        <option value="Checking">Checking</option>
-                                        <option value="Savings">Savings</option>
-                                        <option value="Money Market">Money Market</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group">	
-                                <label for="_fid_202" class="col-lg-3 col-lg-offset-1 control-label">Please Attach a Voided Check for this Account:</label>
-                                <div class="col-lg-5 controls">	
-                                    <input class="form-control" type="file" name="_fid_202" id="_fid_202"/>
-                                </div>
-                            </div>
-
+                    <div class="form-group">	
+                        <label for="_fid_73" class="col-lg-3 col-lg-offset-1 control-label">Name of Billing Bank</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="40" name="_fid_73" id="_fid_73" />
                         </div>
                     </div>
+
+                    <!-- Start Hide
+                    <div class="form-group hidden">	
+                        <label for="_fid_106" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Address</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="60" name="_fid_106" id="_fid_106" placeholder="Street Name, City, State, Zip" />
+                        </div>
+                    </div>
+                    End Hide-->
+
+                    <div class="form-group">	
+                        <label for="_fid_107" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Address 1</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="11" name="_fid_107" id="_fid_107" placeholder="Street Name"/>
+                         </div>
+                     </div>
+
+                     <div class="form-group">	
+                        <label for="_fid_108" class="col-lg-3 col-lg-offset-1 control-label">Address 2</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="60" name="_fid_108" id="_fid_108" placeholder="Unit/Suite/Room No., Building No., etc." />
+                         </div>
+                     </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_109" class="col-lg-3 col-lg-offset-1 control-label">City</label>
+                        <div class="col-lg-3 controls">	
+                            <input class="form-control" type="text" size="60" name="_fid_109" id="_fid_109" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_110" class="col-lg-3 col-lg-offset-1 control-label">State / Region</label>
+                        <div class="col-lg-3">
+                            <select class="form-control" name="_fid_110" id="_fid_110" >
+                                <option selected></option>
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option>Arizona</option>
+                                <option>Arkansas</option>
+                                <option>California</option>
+                                <option>Colorado</option>
+                                <option>Connecticut</option>
+                                <option>Delaware</option>
+                                <option>District of Columbia</option>
+                                <option>Florida</option>
+                                <option>Georgia</option>
+                                <option>Hawaii</option>
+                                <option>Idaho</option>
+                                <option>Illinois</option>
+                                <option>Indiana</option>
+                                <option>Iowa</option>
+                                <option>Kansas</option>
+                                <option>Kentucky</option>
+                                <option>Louisiana</option>
+                                <option>Maine</option>
+                                <option>Maryland</option>
+                                <option>Massachusetts</option>
+                                <option>Michigan</option>
+                                <option>Minnesota</option>
+                                <option>Mississippi</option>
+                                <option>Missouri</option>
+                                <option>Montana</option>
+                                <option>Nebraska</option>
+                                <option>Nevada</option>
+                                <option>New Hampshire</option>
+                                <option>New Jersey</option>
+                                <option>New Mexico</option>
+                                <option>New York</option>
+                                <option>North Carolina</option>
+                                <option>North Dakota</option>
+                                <option>Ohio</option>
+                                <option>Oklahoma</option>
+                                <option>Oregon</option>
+                                <option>Pennsylvania</option>
+                                <option>Rhode Island</option>
+                                <option>South Carolina</option>
+                                <option>South Dakota</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Utah</option>
+                                <option>Vermont</option>
+                                <option>Virginia</option>
+                                <option>Washington</option>
+                                <option>West Virginia</option>
+                                <option>Wisconsin</option>
+                                <option>Wyoming</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_111" class="col-lg-3 col-lg-offset-1 control-label">Zip Code</label>
+                        <div class="col-lg-2 controls">	
+                            <input class="form-control" type="text" size="10" name="_fid_111" id="_fid_111" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_75" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Contact Name</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="40" name="_fid_75" id="_fid_75" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_76" class="col-lg-3 col-lg-offset-1 control-label">Billing Bank Contact Phone</label>
+                        <div class="col-lg-3 controls">	
+                            <input class="form-control" type="tel" size="14" name="_fid_76" id="_fid_76" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_77" class="col-lg-3 col-lg-offset-1 control-label">Routing Number</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="40" name="_fid_77" id="_fid_77" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_78" class="col-lg-3 col-lg-offset-1 control-label">Billing Account Number</label>
+                        <div class="col-lg-4 controls">	
+                            <input class="form-control" type="text" size="40" name="_fid_78" id="_fid_78" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_79" class="col-lg-3 col-lg-offset-1 control-label">Billing Account Type</label>
+                        <div class="col-lg-4 controls">	
+                            <select class="form-control" name="_fid_79" id="_fid_79" />
+                                <option value=" " selected></option>
+                                <option value="Checking">Checking</option>
+                                <option value="Savings">Savings</option>
+                                <option value="Money Market">Money Market</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">	
+                        <label for="_fid_202" class="col-lg-3 col-lg-offset-1 control-label">Please Attach a Voided Check for this Account:</label>
+                        <div class="col-lg-5 controls">	
+                            <input class="form-control" type="file" name="_fid_202" id="_fid_202"/>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-	
 		</div>	
 	</fieldset>
 
@@ -1080,7 +1140,7 @@
 	
 	<div class="container-fluid">
 		<div class="col-lg-2 col-lg-offset-8">
-			<button class="btn btn-gray btn-lg btn-block" type=print value=print name="Print" disabled> Print
+			<button class="btn btn-gray btn-lg btn-block hidden" type=print value=print name="Print" disabled> Print
 		</div>
 	</div>
 	
@@ -1137,25 +1197,6 @@
         </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-<script type="text/javascript" src="js/date-picker.js"></script>
-<script type="text/javascript" src="js/check-for-other.js"></script>
-
-<script>
-    $("#qdbform").validate();
-</script>
-
-<script src="modernizr.js"></script>
-<script>Modernizr.load({
-  test: Modernizr.inputtypes.date,
-  nope: ['http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js', 'jquery-ui.css'],
-  complete: function () {
-    $('input[type=date]').datepicker({
-      dateFormat: 'yy-mm-dd'
-    }); 
-  }
-});
-</script>
 
 </body>
 
